@@ -9,6 +9,7 @@ public class SuperBTWRecipes
 	{
 		addProgressRecipes();
 		addBladeRecipes();
+		addLeatherRecipes();
 	}
 	
     public static ShapedRecipes AddRecipe( ItemStack itemStack, Object aobj[] )
@@ -30,6 +31,15 @@ public class SuperBTWRecipes
 			"X", 
 	    	Character.valueOf( 'X' ), FCBetterThanWolves.fcItemNuggetIron
 		} );
+	}
+	
+	private static void addLeatherRecipes()
+	{
+		FCRecipes.AddShapelessRecipe(new ItemStack(Item.plateLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
+		FCRecipes.AddShapelessRecipe(new ItemStack(Item.legsLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
+		FCRecipes.AddShapelessRecipe(new ItemStack(Item.helmetLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
+		FCRecipes.AddShapelessRecipe(new ItemStack(Item.bootsLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
+		
 	}
 
 
