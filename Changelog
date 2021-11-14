@@ -1,0 +1,18 @@
+VERSION 1.0
+Additions:
+-Added new tool type: blades/knives
+-Added new tool: Flint knife
+-Added new tool: Iron knife
+-Added new progress crafting recipe: flint knapping (to produce flint knife)
+-Added new item: Branch
+-Added new crafting recipes for leather armor to make leather worth something early on.
+
+Changes/Tweaks:
+-Changed cows to drop at least 1 leather guaranteed.
+-Changed leather to render into 2 glue instead of 1 (and 1 cut leather = 1 glue) 
+-Changed pork to render into 3 tallow instead of 1
+-Brought back beef rendering: beef renders into 1 tallow (why not?)
+-Made steel tools enchantable in the standard table ;P
+
+Fixes:
+-Fixed mining charges to drop full blocks of cobble when stone is blasted. Ore chunks are dropped when ore is blasted.
