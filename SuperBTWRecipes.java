@@ -1,6 +1,6 @@
 package net.minecraft.src;
 
-public class SuperBTWRecipes 
+public class SuperBTWRecipes extends FCRecipes
 {
 	public static final SuperBTWRecipes instance = new SuperBTWRecipes();
 	private SuperBTWRecipes() {}
@@ -31,6 +31,12 @@ public class SuperBTWRecipes
 			"X", 
 	    	Character.valueOf( 'X' ), FCBetterThanWolves.fcItemNuggetIron
 		} );
+		AddRecipe( new ItemStack( SuperBTWDefinitions.ironBlade ), new Object[] 
+		{ 
+			"XX", 
+	    	Character.valueOf( 'X' ), FCBetterThanWolves.fcItemNuggetIron
+		} );
+
 	}
 	
 	private static void addLeatherRecipes()
@@ -40,6 +46,12 @@ public class SuperBTWRecipes
 		FCRecipes.AddShapelessRecipe(new ItemStack(Item.helmetLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
 		FCRecipes.AddShapelessRecipe(new ItemStack(Item.bootsLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
 		
+		
+		AddStokedCrucibleRecipe( 
+			new ItemStack( SuperBTWDefinitions.rib, 1 ), 
+			new ItemStack[] {
+			new ItemStack( SuperBTWDefinitions.cowRib )
+		} );
 	}
 
 

@@ -371,15 +371,16 @@ public abstract class FCRecipes
 		} );
 		
 		// arrows
+		//AARON CHANGED!!! From single arrow to 3
 		
-		AddShapelessRecipe( new ItemStack( Item.arrow ), new Object[] {
+		AddShapelessRecipe( new ItemStack( Item.arrow, 3 ), new Object[] {
     		new ItemStack( Item.feather ),
     		new ItemStack( Item.stick ),
     		new ItemStack( Item.silk ),
     		new ItemStack( Item.flint )
 		} );
 		
-		AddShapelessRecipe( new ItemStack( Item.arrow ), new Object[] {
+		AddShapelessRecipe( new ItemStack( Item.arrow, 3 ), new Object[] {
     		new ItemStack( Item.feather ),
     		new ItemStack( Item.stick ),
     		new ItemStack( FCBetterThanWolves.fcItemHempFibers ),
@@ -3925,15 +3926,15 @@ public abstract class FCRecipes
 		} );
         
         // tallow recipes
-        
+        //AARON CHANGE!!! From 1 tallow per pork to 3
         AddStokedCauldronRecipe(
-				new ItemStack( FCBetterThanWolves.fcItemTallow, 1 ), 
+				new ItemStack( FCBetterThanWolves.fcItemTallow, 3 ), 
 				new ItemStack[] {
 					new ItemStack( Item.porkCooked, 1 ) 
 			} );
                 
         AddStokedCauldronRecipe(
-				new ItemStack( FCBetterThanWolves.fcItemTallow, 1 ), 
+				new ItemStack( FCBetterThanWolves.fcItemTallow, 3 ), 
 				new ItemStack[] {
 					new ItemStack( Item.porkRaw, 1 ) 
 			} );
@@ -3953,13 +3954,13 @@ public abstract class FCRecipes
         AddStokedCauldronRecipe(
 				new ItemStack( FCBetterThanWolves.fcItemTallow, 1 ), 
 				new ItemStack[] {
-					new ItemStack( Item.beefCooked, 4 ) 
+					new ItemStack( Item.beefCooked, 1 ) 
 			} );
         
         AddStokedCauldronRecipe(
 				new ItemStack( FCBetterThanWolves.fcItemTallow, 1 ), 
 				new ItemStack[] {
-					new ItemStack( Item.beefRaw, 4 ) 
+					new ItemStack( Item.beefRaw, 1 ) 
 			} );
         
         AddStokedCauldronRecipe(
@@ -3977,13 +3978,13 @@ public abstract class FCRecipes
         AddStokedCauldronRecipe(
 			new ItemStack( FCBetterThanWolves.fcItemTallow, 1 ), 
 			new ItemStack[] {
-				new ItemStack( FCBetterThanWolves.fcItemRawMysteryMeat, 2 ) 
+				new ItemStack( FCBetterThanWolves.fcItemRawMysteryMeat, 16 ) 
 		} );
         
         AddStokedCauldronRecipe(
 			new ItemStack( FCBetterThanWolves.fcItemTallow, 1 ), 
 			new ItemStack[] {
-				new ItemStack( FCBetterThanWolves.fcItemCookedMysteryMeat, 2 ) 
+				new ItemStack( FCBetterThanWolves.fcItemCookedMysteryMeat, 16 ) 
 		} );
         
         // Potash Recipes
