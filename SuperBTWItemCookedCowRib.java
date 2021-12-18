@@ -9,8 +9,10 @@ public class SuperBTWItemCookedCowRib extends Item
 		SetBuoyant();
     	SetIncineratedInCrucible();
     	setUnlocalizedName( "SuperBTWItemCookedCowRib" );
+
     	
     	this.setCreativeTab(CreativeTabs.tabFood);
+
 		
 	}
 }

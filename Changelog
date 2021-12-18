@@ -8,6 +8,7 @@ Additions:
 -Added new progress crafting recipe: flint knapping (to produce flint knife)
 -Added new progress crafting recipe: leather cutting (to make cut leather)
 -Added new item: Branch
+
 -Added new crafting recipes for leather armor using cut leather (for use in 2x2 grid!)
 
 -Added new cow drop: Beef rib
@@ -15,6 +16,7 @@ Additions:
 -Added new progress crafting recipe: rib cutting
 -Added new item: Rib Bone (made from beef rib)
 -Added new tool: Bone Pickaxe (made from rib)
+
 
 
 Changes/Tweaks:
@@ -31,6 +33,7 @@ Fixes:
 
 
 NOT YET
+
 -Added new item: Sinew (a string substitute made from meat) TODO
 
 -added the meat cube! TODO
@@ -40,4 +43,5 @@ NOT YET
 -Made steel tools enchantable in the standard table ;P
 
 -Fixed mining charges
+
 
