@@ -75,8 +75,96 @@ public class SuperBTWRecipesRibCarving implements IRecipe
 	    	}
 	    	
 	    	return false;
-	  }
-
+	  
+	 }
+	 
+//		@Override
+//		public ItemStack getCraftingResult(InventoryCrafting craftingInventory) {
+//		    {
+//		        ItemStack bladeStack = null;
+//		        ItemStack ribStack = null;
+//		        
+//		        for ( int iTempSlot = 0; iTempSlot < craftingInventory.getSizeInventory(); ++iTempSlot )
+//		        {
+//		            ItemStack tempStack = craftingInventory.getStackInSlot( iTempSlot );
+//
+//		            if ( tempStack != null )
+//		            {
+//		                if ( isBlade( tempStack ) )
+//		                {
+//		                	if ( bladeStack == null )
+//		                	{
+//		                		bladeStack = tempStack;
+//		                	}
+//		                	else
+//		                	{
+//		                		return null;
+//		                	}
+//		                }
+//		                else if ( IsRib( tempStack ) )
+//		                {
+//		                    if ( ribStack == null )
+//		                    {
+//		                    	ribStack = tempStack;                        
+//		                    }
+//		                    else
+//		                    {
+//		                    	return null;
+//		                    }
+//		                }
+//		                else
+//		                {
+//		                	return null;
+//		                }
+//		            }
+//		        }
+//		        
+//		        if ( ribStack != null && bladeStack != null )
+//		        {
+//		        	ItemStack resultStack = null;
+//		        	
+//		        	ItemStack inheritedBlade = bladeStack;
+//		        	
+//
+//		        	SuperBTWItemBlade bladeItem = (SuperBTWItemBlade)bladeStack.getItem();
+//
+//		            if ( bladeItem.getMaterial() == 0 ) // flint
+//		            {
+//		            	resultStack = new ItemStack(SuperBTWDefinitions.ribCarving, 1, 150);
+//		            	
+//		            	NBTTagCompound newTag = new NBTTagCompound();
+//		            	resultStack.setTagCompound(newTag);
+//		            	
+//		            	resultStack.getTagCompound().setInteger("damage", inheritedBlade.getItemDamage());
+//		            	
+//		            	
+//		            	//test output
+//		            	//resultStack = bladeStack;
+//		            }
+//		            
+//		            else if ( bladeItem.getMaterial() == 1 ) //iron
+//		            {
+//		            	resultStack = new ItemStack(SuperBTWDefinitions.ribCarvingIron, 1, 75);
+//		            	
+//		            	NBTTagCompound newTag = new NBTTagCompound();
+//		            	resultStack.setTagCompound(newTag);
+//		            	
+//		            	resultStack.getTagCompound().setInteger("damage", inheritedBlade.getItemDamage());
+//		            }
+//		            
+//		            else
+//		            {
+//		            	return null;
+//		            }
+//		            
+//		            return resultStack;
+//
+//		        }
+//		        
+//		    	return null;
+//		    }
+//		}
+//CONNOR'S CODE VVV
 	@Override
 	public ItemStack getCraftingResult(InventoryCrafting craftingInventory) {
 	    {
@@ -132,7 +220,7 @@ public class SuperBTWRecipesRibCarving implements IRecipe
 	        	
 	        	case 0:
 
-	            	resultStack = new ItemStack(SuperBTWDefinitions.ribCarving, 1, 150);
+	            	resultStack = new ItemStack(SuperBTWDefinitions.ribCarving, 1, 200);
 	            	break;
 	            	
 	            	//test output

@@ -19,7 +19,7 @@ public class SuperBTWItemLeatherWorkingIron extends FCItemCraftingProgressive
 	
 	 protected int GetProgressiveCraftingMaxDamage() //how long it takes... don't forget to match value from RecipesLeatherCutting!
 	 {
-	    return 50;
+	    return 30;
 	 }
 	 
 	 protected void PlayCraftingFX( ItemStack stack, World world, EntityPlayer player )

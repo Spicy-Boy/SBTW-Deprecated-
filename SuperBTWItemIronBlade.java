@@ -17,6 +17,8 @@ public class SuperBTWItemIronBlade extends SuperBTWItemBlade
 	    setUnlocalizedName( "SuperBTWItemIronBlade" ); 
 	    
 	    this.setCreativeTab(CreativeTabs.tabTools);
+	    
+	    SetIncineratedInCrucible();
 
 	}
 	

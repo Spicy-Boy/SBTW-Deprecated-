@@ -129,7 +129,7 @@ public class SuperBTWRecipesLeatherCutting implements IRecipe
 
 	            if ( bladeItem.getMaterial() == 0 ) // flint
 	            {
-	            	resultStack = new ItemStack(SuperBTWDefinitions.leatherWorking, 1, 200);
+	            	resultStack = new ItemStack(SuperBTWDefinitions.leatherWorking, 1, 150);
 	            	
 	            	NBTTagCompound newTag = new NBTTagCompound();
 	            	resultStack.setTagCompound(newTag);
@@ -143,7 +143,7 @@ public class SuperBTWRecipesLeatherCutting implements IRecipe
 	            
 	            else if ( bladeItem.getMaterial() == 1 ) //iron
 	            {
-	            	resultStack = new ItemStack(SuperBTWDefinitions.leatherWorkingIron, 1, 50);
+	            	resultStack = new ItemStack(SuperBTWDefinitions.leatherWorkingIron, 1, 30);
 	            	
 	            	NBTTagCompound newTag = new NBTTagCompound();
 	            	resultStack.setTagCompound(newTag);

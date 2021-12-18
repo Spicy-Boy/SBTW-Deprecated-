@@ -6,3 +6,6 @@ tile.SuperBTWItemFlintKnapping.name=Flint Knapping
 tile.SuperBTWItemFlintBlade.name=Flint Knife
 tile.SuperBTWItemIronBlade.name=Iron Knife
 tile.SuperBTWItemBranch.name=Branch
+tile.SuperBTWItemCowRib.name=Raw Beef Rib
+tile.SuperBTWItemRib.name=Rib Bone
+tile.SuperBTWItemCookedCowRib=Seared Beef Rib

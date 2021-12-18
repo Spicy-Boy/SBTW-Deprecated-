@@ -19,13 +19,13 @@ public class SuperBTWRecipes extends FCRecipes
 	{
 		CraftingManager.getInstance().getRecipeList().add( new SuperBTWRecipesLeatherCutting() );
 		
+		CraftingManager.getInstance().getRecipeList().add( new SuperBTWRecipesRibCarving() );
 		
 	}
 	
 	
 	public static void addToolRecipes()
 	{
-		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.rib, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.cowRib), new ItemStack(SuperBTWDefinitions.flintBlade)} );
 		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.bonePickaxe, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.rib), new ItemStack(Item.silk), new ItemStack(Item.stick)} );
 	}
 	

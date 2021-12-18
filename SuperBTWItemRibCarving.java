@@ -11,13 +11,13 @@ public class SuperBTWItemRibCarving extends FCItemCraftingProgressive
 	    	
 	    SetBuoyant();
 	    	
-	    setUnlocalizedName( "SuperBTWItemLeatherWorking" );  
+	    setUnlocalizedName( "SuperBTWItemRibCarving" );  
 	    
 	    setMaxDamage( GetProgressiveCraftingMaxDamage() );
 	    
 	 }
 	
-	 protected int GetProgressiveCraftingMaxDamage() //how long it takes... don't forget to match value from RecipesLeatherCutting!
+	 protected int GetProgressiveCraftingMaxDamage() //how long it takes... don't forget to match value from RecipesRibCarving!
 	 {
 	    return 200;
 	 }
@@ -56,15 +56,6 @@ public class SuperBTWItemRibCarving extends FCItemCraftingProgressive
 	        return new ItemStack( FCBetterThanWolves.fcItemLeatherCut, 2);
 	 }
 	 
-	 private Icon m_iconLeatherWorking;
-	 
-	 @Override    
-	 public void registerIcons( IconRegister register )
-	 {
-		 super.registerIcons( register );
-	    	
-	     m_iconLeatherWorking = register.registerIcon( "SuperBTWItemLeatherCutting" );
-	 }
 	    
 	 public void onCreated( ItemStack stack, World world, EntityPlayer player ) 
 	 {
