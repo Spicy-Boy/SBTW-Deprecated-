@@ -1,25 +1,25 @@
 package net.minecraft.src;
 
-public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive 
+public class SuperBTWItemRibCarving extends FCItemCraftingProgressive 
 {
 	
 	static int internalBladeDamage;
 	
-	public SuperBTWItemLeatherWorking(int iItemID) {
+	public SuperBTWItemRibCarving(int iItemID) {
 		super(iItemID);
 		// TODO Auto-generated constructor stub
 	    	
 	    SetBuoyant();
 	    	
-	    setUnlocalizedName( "SuperBTWItemLeatherWorking" );  
+	    setUnlocalizedName( "SuperBTWItemRibCarving" );  
 	    
 	    setMaxDamage( GetProgressiveCraftingMaxDamage() );
 	    
 	 }
 	
-	 protected int GetProgressiveCraftingMaxDamage() //how long it takes... don't forget to match value from RecipesLeatherCutting!
+	 protected int GetProgressiveCraftingMaxDamage() //how long it takes... don't forget to match value from RecipesRibCarving!
 	 {
-	    return 150;
+	    return 200;
 	 }
 	 
 	 protected void PlayCraftingFX( ItemStack stack, World world, EntityPlayer player )
@@ -32,7 +32,7 @@ public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive
 	 
 	 public ItemStack onEaten( ItemStack stack, World world, EntityPlayer player )
 	 {
-	    	ItemStack leatherWorking = new ItemStack( SuperBTWDefinitions.leatherWorking, 1);
+	    	ItemStack ribCarving = new ItemStack( SuperBTWDefinitions.ribCarving, 1);
 	    	
 	        world.playSoundAtEntity( player, "step.cloth", 1.0F, world.rand.nextFloat() * 0.1F + 0.9F );
 	        
@@ -56,15 +56,6 @@ public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive
 	        return new ItemStack( FCBetterThanWolves.fcItemLeatherCut, 2);
 	 }
 	 
-	 private Icon m_iconLeatherWorking;
-	 
-	 @Override    
-	 public void registerIcons( IconRegister register )
-	 {
-		 super.registerIcons( register );
-	    	
-	     m_iconLeatherWorking = register.registerIcon( "SuperBTWItemLeatherCutting" );
-	 }
 	    
 	 public void onCreated( ItemStack stack, World world, EntityPlayer player ) 
 	 {

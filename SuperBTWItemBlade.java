@@ -13,4 +13,11 @@ public class SuperBTWItemBlade extends FCItemTool
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	public int getMaterial()
+	{
+		return 1; //0 is flint, 1 is iron
+	}
+	
+
 }

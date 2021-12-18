@@ -1,25 +1,25 @@
 package net.minecraft.src;
 
-public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive 
+public class SuperBTWItemRibCarvingIron extends FCItemCraftingProgressive 
 {
 	
 	static int internalBladeDamage;
 	
-	public SuperBTWItemLeatherWorking(int iItemID) {
+	public SuperBTWItemRibCarvingIron(int iItemID) {
 		super(iItemID);
 		// TODO Auto-generated constructor stub
 	    	
 	    SetBuoyant();
 	    	
-	    setUnlocalizedName( "SuperBTWItemLeatherWorking" );  
+	    setUnlocalizedName( "SuperBTWItemRibCarvingIron" );  
 	    
 	    setMaxDamage( GetProgressiveCraftingMaxDamage() );
 	    
 	 }
 	
-	 protected int GetProgressiveCraftingMaxDamage() //how long it takes... don't forget to match value from RecipesLeatherCutting!
+	 protected int GetProgressiveCraftingMaxDamage() //how long it takes... don't forget to match value from RecipesRibCarving!
 	 {
-	    return 150;
+	    return 75;
 	 }
 	 
 	 protected void PlayCraftingFX( ItemStack stack, World world, EntityPlayer player )
@@ -32,7 +32,7 @@ public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive
 	 
 	 public ItemStack onEaten( ItemStack stack, World world, EntityPlayer player )
 	 {
-	    	ItemStack leatherWorking = new ItemStack( SuperBTWDefinitions.leatherWorking, 1);
+	    	ItemStack leatherWorking = new ItemStack( SuperBTWDefinitions.ribCarvingIron, 1);
 	    	
 	        world.playSoundAtEntity( player, "step.cloth", 1.0F, world.rand.nextFloat() * 0.1F + 0.9F );
 	        
@@ -42,28 +42,18 @@ public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive
 	        
 	        internalBladeDamage = stack.getTagCompound().getInteger("damage") + 1;
 	        
-	        if (internalBladeDamage >= 21)
+	        if (internalBladeDamage >= 76)
 	        {
 	        	
 	        }
 	        else
 	        {
-	        	FCUtilsItem.GivePlayerStackOrEject( player, new ItemStack(SuperBTWDefinitions.flintBlade, 1, internalBladeDamage));
+	        	FCUtilsItem.GivePlayerStackOrEject( player, new ItemStack(SuperBTWDefinitions.ironBlade, 1, internalBladeDamage));
 	        }
 	        
 	        
 			
-	        return new ItemStack( FCBetterThanWolves.fcItemLeatherCut, 2);
-	 }
-	 
-	 private Icon m_iconLeatherWorking;
-	 
-	 @Override    
-	 public void registerIcons( IconRegister register )
-	 {
-		 super.registerIcons( register );
-	    	
-	     m_iconLeatherWorking = register.registerIcon( "SuperBTWItemLeatherCutting" );
+	        return new ItemStack( SuperBTWDefinitions.rib, 1);
 	 }
 	    
 	 public void onCreated( ItemStack stack, World world, EntityPlayer player ) 

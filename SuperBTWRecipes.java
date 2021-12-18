@@ -7,19 +7,41 @@ public class SuperBTWRecipes extends FCRecipes
 	
 	public static void addRecipes()
 	{
+		addCustomRecipeClasses();
+		addFoodRecipes();
+		addToolRecipes();
 		addProgressRecipes();
 		addBladeRecipes();
 		addLeatherRecipes();
 	}
 	
-    public static ShapedRecipes AddRecipe( ItemStack itemStack, Object aobj[] )
+	public static void addCustomRecipeClasses() 
 	{
-    	return CraftingManager.getInstance().addRecipe( itemStack, aobj );
+		CraftingManager.getInstance().getRecipeList().add( new SuperBTWRecipesLeatherCutting() );
+		
+		CraftingManager.getInstance().getRecipeList().add( new SuperBTWRecipesRibCarving() );
+		
+	}
+	
+	
+	public static void addToolRecipes()
+	{
+		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.bonePickaxe, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.rib), new ItemStack(Item.silk), new ItemStack(Item.stick)} );
+	}
+	
+	public static void addFoodRecipes()
+	{
+		FurnaceRecipes.smelting().addSmelting( SuperBTWDefinitions.cowRib.itemID, new ItemStack( SuperBTWDefinitions.cookedCowRib ), 0 );
+		
 	}
 	
 	private static void addProgressRecipes() 
 	{
-		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.leatherWorking, 1, 20), new ItemStack[] {new ItemStack(Item.flint), new ItemStack(Item.leather)} );
+
+		//OLD VVV
+		//FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.leatherWorking, 1, 20), new ItemStack[] {new ItemStack(SuperBTWDefinitions.flintBlade), new ItemStack(Item.leather)} );
+		
+		
 		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.flintKnapping, 1, 10), new ItemStack [] {new ItemStack(Item.flint), new ItemStack(FCBetterThanWolves.fcItemStone)} );
 	}
 	

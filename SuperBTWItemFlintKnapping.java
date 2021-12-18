@@ -5,6 +5,7 @@ public class SuperBTWItemFlintKnapping extends Item
 {
 	
 	static public final int m_iDefaultMaxDamage = 10;
+//	static boolean holding = true;
 	
 	public SuperBTWItemFlintKnapping(int iItemID) {
 		super(iItemID);
@@ -28,24 +29,7 @@ public class SuperBTWItemFlintKnapping extends Item
 //		m_iconFlintKnapping = register.registerIcon( "SuperBTWItemFlintKnapping" );
 //	}
 	
-	
-//	@Override
-//    public boolean onItemUse( ItemStack stack, EntityPlayer player, World world, int i, int j, int k, int iFacing, float fClickX, float fClickY, float fClickZ )
-//    {
-//        //if ( player.canPlayerEdit( i, j, k, iFacing, stack ) )
-//        //{
-//    		PerformUseEffects( player );
-//  
-//            //player.addExhaustion( m_fExhaustionPerUse );
-//            
-//            stack.damageItem( -1, player );
-//            
-//            return true;
-//        //}
-//        
-//        //return false;
-//    }
-	
+/*STANDARD CODE (HOLD RIGHT CLICK)*/
 	public ItemStack onItemRightClick( ItemStack itemStack, World world, EntityPlayer entityPlayer )
 	{
 		
@@ -71,10 +55,49 @@ public class SuperBTWItemFlintKnapping extends Item
 		player.playSound( "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F );
 		//System.out.println("USED KNAPPING USED KNAPPING USED KNAPPING");
 	}
+
+/*ATTEMPT TO MAKE IT TAKE DAMAGE WHEN RIGHT CLICK IS RELEASED*/
+//	public ItemStack onItemRightClick( ItemStack itemStack, World world, EntityPlayer entityPlayer )
+//	{
+//		
+//		PerformUseEffects(entityPlayer);
+//		
+//		entityPlayer.setItemInUse( itemStack, getMaxItemUseDuration( itemStack ) );
+//		if (holding == false) 
+//		{
+//			itemStack.damageItem( -1, entityPlayer );
+//			holding = true;
+//		}
+//		
+//		if (itemStack.getItemDamage() == 0) 
+//		{
+//			FCUtilsItem.GivePlayerStackOrEject( entityPlayer, new ItemStack(FCBetterThanWolves.fcItemStone, 1));
+//			
+//			return new ItemStack( SuperBTWDefinitions.flintBlade, 1);
+//		}
+//		else 
+//		{
+//			return itemStack;
+//		}
+//		
+//	}
+//	
+//	public void onPlayerStoppedUsing(ItemStack itemStack, World par2World, EntityPlayer entityPlayer, int par4) 
+//	{
+//		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!!!");
+//		holding = false;
+//		
+//	}
+
 	
 	//from FCItemCraftingProgressive
     protected int GetProgressiveCraftingMaxDamage()
     {
     	return m_iDefaultMaxDamage;
+    }
+    
+    public int getMaxItemUseDuration(ItemStack par1ItemStack)
+    {
+        return 5000;
     }
 }
