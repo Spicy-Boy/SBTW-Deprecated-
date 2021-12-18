@@ -105,6 +105,8 @@ public class FCEntityCow extends EntityCow
     @Override
     protected void dropFewItems( boolean bKilledByPlayer, int iLootingModifier )
     {
+    	dropItem( SuperBTWDefinitions.cowRib.itemID, 1 );
+    	
     	if ( !IsStarving() )
     	{
 	        int iNumDrops = rand.nextInt( 2 ) + 1 + rand.nextInt( 1 + iLootingModifier );

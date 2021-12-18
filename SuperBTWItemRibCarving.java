@@ -1,11 +1,11 @@
 package net.minecraft.src;
 
-public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive 
+public class SuperBTWItemRibCarving extends FCItemCraftingProgressive 
 {
 	
 	static int internalBladeDamage;
 	
-	public SuperBTWItemLeatherWorking(int iItemID) {
+	public SuperBTWItemRibCarving(int iItemID) {
 		super(iItemID);
 		// TODO Auto-generated constructor stub
 	    	
@@ -32,7 +32,7 @@ public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive
 	 
 	 public ItemStack onEaten( ItemStack stack, World world, EntityPlayer player )
 	 {
-	    	ItemStack leatherWorking = new ItemStack( SuperBTWDefinitions.leatherWorking, 1);
+	    	ItemStack ribCarving = new ItemStack( SuperBTWDefinitions.ribCarving, 1);
 	    	
 	        world.playSoundAtEntity( player, "step.cloth", 1.0F, world.rand.nextFloat() * 0.1F + 0.9F );
 	        

@@ -1,17 +1,17 @@
 package net.minecraft.src;
 
-public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive 
+public class SuperBTWItemLeatherWorkingIron extends FCItemCraftingProgressive 
 {
 	
 	static int internalBladeDamage;
 	
-	public SuperBTWItemLeatherWorking(int iItemID) {
+	public SuperBTWItemLeatherWorkingIron(int iItemID) {
 		super(iItemID);
 		// TODO Auto-generated constructor stub
 	    	
 	    SetBuoyant();
 	    	
-	    setUnlocalizedName( "SuperBTWItemLeatherWorking" );  
+	    setUnlocalizedName( "SuperBTWItemLeatherWorkingIron" );  
 	    
 	    setMaxDamage( GetProgressiveCraftingMaxDamage() );
 	    
@@ -19,7 +19,7 @@ public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive
 	
 	 protected int GetProgressiveCraftingMaxDamage() //how long it takes... don't forget to match value from RecipesLeatherCutting!
 	 {
-	    return 200;
+	    return 50;
 	 }
 	 
 	 protected void PlayCraftingFX( ItemStack stack, World world, EntityPlayer player )
@@ -42,13 +42,13 @@ public class SuperBTWItemLeatherWorking extends FCItemCraftingProgressive
 	        
 	        internalBladeDamage = stack.getTagCompound().getInteger("damage") + 1;
 	        
-	        if (internalBladeDamage >= 21)
+	        if (internalBladeDamage >= 76)
 	        {
 	        	
 	        }
 	        else
 	        {
-	        	FCUtilsItem.GivePlayerStackOrEject( player, new ItemStack(SuperBTWDefinitions.flintBlade, 1, internalBladeDamage));
+	        	FCUtilsItem.GivePlayerStackOrEject( player, new ItemStack(SuperBTWDefinitions.ironBlade, 1, internalBladeDamage));
 	        }
 	        
 	        
