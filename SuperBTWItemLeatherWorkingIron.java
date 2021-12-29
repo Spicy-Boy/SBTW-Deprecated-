@@ -1,6 +1,6 @@
 package net.minecraft.src;
 
-public class SuperBTWItemLeatherWorkingIron extends FCItemCraftingProgressive 
+public class SuperBTWItemLeatherWorkingIron extends SuperBTWItemBladeProgressive 
 {
 	
 	static int internalBladeDamage;
@@ -8,8 +8,6 @@ public class SuperBTWItemLeatherWorkingIron extends FCItemCraftingProgressive
 	public SuperBTWItemLeatherWorkingIron(int iItemID) {
 		super(iItemID);
 		// TODO Auto-generated constructor stub
-	    	
-	    SetBuoyant();
 	    	
 	    setUnlocalizedName( "SuperBTWItemLeatherWorkingIron" );  
 	    

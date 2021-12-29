@@ -1,6 +1,6 @@
 package net.minecraft.src;
 
-public class SuperBTWItemRibCarving extends FCItemCraftingProgressive 
+public class SuperBTWItemRibCarving extends SuperBTWItemBladeProgressive 
 {
 	
 	static int internalBladeDamage;
@@ -8,8 +8,6 @@ public class SuperBTWItemRibCarving extends FCItemCraftingProgressive
 	public SuperBTWItemRibCarving(int iItemID) {
 		super(iItemID);
 		// TODO Auto-generated constructor stub
-	    	
-	    SetBuoyant();
 	    	
 	    setUnlocalizedName( "SuperBTWItemRibCarving" );  
 	    

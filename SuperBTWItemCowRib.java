@@ -6,12 +6,10 @@ public class SuperBTWItemCowRib extends Item
 	{
 		super (iItemID);
 		
-
     	SetIncineratedInCrucible();
     	setUnlocalizedName( "SuperBTWItemCowRib" );
     	
     	this.setCreativeTab(CreativeTabs.tabFood);
-
 		
 	}
 }
