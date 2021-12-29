@@ -1,4 +1,3 @@
 # Super-Better-Than-Wolves
 
-Super Better Than Wolves is the ultimate answer to the survival experience. It makes the earlygame fun again.
-
+It is the ultimate answer to the BTW earlygame, a massive infusion of content to enrich the experience and give players more to do both during the day and at night
