@@ -891,6 +891,8 @@ public abstract class FCRecipes
 			'#', new ItemStack(Block.planks, 1, 3)});
 	}
 	
+	//AARON Changed a recipe... ;p
+	
 	private static void AddWoolAndKnittingRecipes()
 	{
 		AddShapelessRecipe( new ItemStack( FCBetterThanWolves.fcItemKnittingNeedles ), new Object[] {	    		
@@ -898,8 +900,9 @@ public abstract class FCRecipes
     		new ItemStack( FCBetterThanWolves.fcItemChiselWood, 1, 0 )
 		} );
 		
+		//changed hat recipe to only require a single wool... ;p
 		AddShapedRecipeWithCustomClass( FCRecipesArmorWool.class, new ItemStack( FCBetterThanWolves.fcItemArmorWoolHelm ), new Object[] {
-    		"##", 
+    		"#", 
     		Character.valueOf( '#' ), new ItemStack( FCBetterThanWolves.fcItemWoolKnit, 1, m_iIgnoreMetadata ) 
 		} );
 		

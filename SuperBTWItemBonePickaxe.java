@@ -1,10 +1,10 @@
 package net.minecraft.src;
 
-public class SuperBTWItemBonePickaxe extends Item
+public class SuperBTWItemBonePickaxe extends FCItemPickaxe
 {
 	public SuperBTWItemBonePickaxe (int iItemID) 
 	{
-		super (iItemID);
+		super (iItemID, EnumToolMaterial.BONE);
 		
     	SetIncineratedInCrucible();
     	setUnlocalizedName( "SuperBTWItemBonePickaxe" );
