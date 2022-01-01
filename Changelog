@@ -42,8 +42,9 @@ Changes/Tweaks:
 -Tweaked diamond tool enchanting to increase the rate of level 3 enchantments
 -Tweaked steel tool enchanting to make level 3 enchantments standard
     >Efficiency IV is now a possibility... too OP?
-
 -Changed Bottles O' Enchanting to drop a lot more EXP...
+
+-Changed minecart chests to drop a chest when broken
 
 
 TODO: branches
@@ -66,6 +67,8 @@ FCBlockWaterStationary
 EnumToolMaterial
 EntityExpBottle
 FCBlockWorkbench
+EntityMinecartChest
+FCBlockGrass (fix lighting bug
 
 
 
