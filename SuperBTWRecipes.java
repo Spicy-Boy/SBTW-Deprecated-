@@ -13,7 +13,7 @@ public class SuperBTWRecipes extends FCRecipes
 		addToolRecipes();
 		addProgressRecipes();
 		addBladeRecipes();
-		addLeatherRecipes();
+		addMiscRecipes();
 	}
 	
 	public static void addCustomRecipeClasses() 
@@ -50,6 +50,7 @@ public class SuperBTWRecipes extends FCRecipes
 	{
 		FurnaceRecipes.smelting().addSmelting( SuperBTWDefinitions.cowRib.itemID, new ItemStack( SuperBTWDefinitions.cookedCowRib ), 0 );
 		
+		AddCampfireRecipe( SuperBTWDefinitions.cowRib.itemID, new ItemStack( SuperBTWDefinitions.cookedCowRib ) );
 	}
 	
 	private static void addProgressRecipes() 
@@ -72,19 +73,38 @@ public class SuperBTWRecipes extends FCRecipes
 		} );
 		AddRecipe( new ItemStack( SuperBTWDefinitions.ironBlade ), new Object[] 
 		{ 
-			"XX", 
+			"X",
+			"X",
 	    	Character.valueOf( 'X' ), FCBetterThanWolves.fcItemNuggetIron
+		} );
+		
+		AddRecipe( new ItemStack( FCBetterThanWolves.fcAestheticVegetation, 1, FCBlockAestheticVegetation.m_iSubtypeVineTrap ), new Object[] {
+	    	"##", 
+	    	Character.valueOf( '#' ), Block.vine
 		} );
 		
 	}
 	
-	private static void addLeatherRecipes()
+	private static void addMiscRecipes()
 	{
 		FCRecipes.AddShapelessRecipe(new ItemStack(Item.plateLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
 		FCRecipes.AddShapelessRecipe(new ItemStack(Item.legsLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
 		FCRecipes.AddShapelessRecipe(new ItemStack(Item.bootsLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
 		FCRecipes.AddShapelessRecipe(new ItemStack(Item.helmetLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
 		
+		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcItemFireStarterSticks, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch), new ItemStack(SuperBTWDefinitions.branch)} );
+		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcItemFireStarterSticks, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch), new ItemStack(Item.stick)} );
+		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcItemChiselWood, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch)} );
+		
+		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcItemFireStarterBow, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch), new ItemStack(SuperBTWDefinitions.branch), new ItemStack(Item.silk)} );
+		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcItemFireStarterBow, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch), new ItemStack(Item.stick), new ItemStack(Item.silk)} );
+		
+		//all them recipes be like (LMAO!!! CAMPFIRE!!!!)
+		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcBlockCampfireUnlit, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch), new ItemStack(Item.stick), new ItemStack(Item.stick), new ItemStack(Item.stick)} );
+		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcBlockCampfireUnlit, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch), new ItemStack(SuperBTWDefinitions.branch), new ItemStack(Item.stick), new ItemStack(Item.stick)} );
+		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcBlockCampfireUnlit, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch), new ItemStack(SuperBTWDefinitions.branch), new ItemStack(SuperBTWDefinitions.branch), new ItemStack(Item.stick)} );
+		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcBlockCampfireUnlit, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch), new ItemStack(SuperBTWDefinitions.branch), new ItemStack(SuperBTWDefinitions.branch), new ItemStack(SuperBTWDefinitions.branch)} );
+
 		
 		AddStokedCrucibleRecipe( 
 			new ItemStack( SuperBTWDefinitions.rib, 1 ), 

@@ -40,7 +40,7 @@ public class SuperBTWItemLeatherWorking extends SuperBTWItemBladeProgressive
 	        
 	        internalBladeDamage = stack.getTagCompound().getInteger("damage") + 1;
 	        
-	        if (internalBladeDamage >= 21)
+	        if (internalBladeDamage >= 16)
 	        {
 	        	
 	        }

@@ -3,13 +3,16 @@ Additions:
 
 -Added new tool type: blades/knives
     >effective against webs
+    >can harvest hemp & vines
+    >deals extra damage
 -Added new tool: Flint knife
 -Added new tool: Iron knife
 -Added new progress crafting recipe: flint knapping (to produce flint knife)
     TODO>Animated! Too many bad hits and the flint may break..
 
 -Added new item: Branch 
-    TODO>How do we get these? Dead bushes and leaves?
+    >Harvested from leaves with knife, random chance drop without knife
+    >Harvested from dead bushes
 
 -Added new progress crafting recipe: leather cutting (to make cut leather)
 -Added new crafting recipes for leather armor using cut leather (for use in 2x2 grid!)
@@ -21,8 +24,9 @@ Additions:
     >eaten in stages, can be shared
 -Added new progress crafting recipe: rib cutting
 -Added new item: Rib Bone (made from beef rib)
--Added new tool: Bone Pickaxe (made from rib)
     TODO>make craft back into knife
+-Added new tool: Bone Pickaxe (made from rib)
+    
 
 -Added recipe for the original workbench, crafted with 8 planks and an iron ingot
 
@@ -46,16 +50,31 @@ Changes/Tweaks:
 
 -Changed minecart chests to drop a chest when broken
 
+-Added Hardcore Bible Murder
+-Changed pointy sticks and sharp stone to deal small amount of damage for pretty much no reason
+
+-Changed (reduced) the HC Respawn timer to 1/4th its original value.
 
 TODO: branches
+    >can be cut from leaves by striking with knife
+    >make generate on the ground of forests
+    >make extremely rare drop from leaves???
+    
+TODO: Bow Stringing recipe
+   (make bow accessible to craft in 2x2 grid by making a bow stringing progress recipe
+   like flint knapping, you need to hold enough to string it or it snaps)
+   
+TODO: Custom death message for being stabbed to death by a knife. Also, clubs if there isn't one already.
 
+TODO: Grass can grow day or night as long as exposed to sun
+
+TODO: Change saplings to take a really long time to grow... or acorns?
 
 Hunger TODO:
 - make starvation health drain take WAAAYYY longer!!! 
 - sprint all the way to hungry (not just peckish)
 - push back the health debuffs to critical levels (look into them, not sure how they work)
 
-Fixes:
 
 Base Class Edits:
 FCBlockWeb
@@ -68,28 +87,20 @@ EnumToolMaterial
 EntityExpBottle
 FCBlockWorkbench
 EntityMinecartChest
-FCBlockGrass (fix lighting bug
+FCBlockGrass (fix lighting bug)
+EntityPlayer (ported from Hiracho mod)
+FCBlockHempCrop (knife harvesting)
+BlockVine (knife harvesting)
+BlockLeaves
+FCBlockLeaves
+FCItemChiselWood
+FCItemChiselStone
+FCUtilsHardcoreSpawn
 
 
-
-
-NOT YET
--Added new item: Sinew (a string substitute made from meat) TODO
-
--added the meat cube! TODO
-
--animated flint sculpting
-
--Recipe: cutting recipes give back blade (in case you need it)
-CODE from bow class:
-
-
-
--Fixed mining charges
-
--Carving recipes on wood give sawdust at intervals?
-    >bowl carving
-
+---
+Long term TODO: Wood widdling/carving recipes
+    > bowls, totems, 
 ---
 Really Crazy Ideas:
 -Make animals startle just by getting too close?
@@ -97,4 +108,6 @@ Nah, that's lame.
 
 -Animals automatically run from mobs?
 Could be fun, maybe hard to implement.
+
+-rib cooking over campfire has custom animation where it is hanging from each stick like smoking a pig
 

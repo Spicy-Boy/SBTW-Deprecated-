@@ -5,6 +5,7 @@ public class SuperBTWItemIronBlade extends SuperBTWItemBlade
 {
 	
 	static int durability = 75;
+	private final int m_iWeaponDamage;
 	
 	public SuperBTWItemIronBlade(int iItemID) 
 	{
@@ -19,6 +20,8 @@ public class SuperBTWItemIronBlade extends SuperBTWItemBlade
 	    this.setCreativeTab(CreativeTabs.tabTools);
 	    
 	    SetIncineratedInCrucible();
+	    
+	    m_iWeaponDamage = 4; //same as stone axe
 
 	}
 	
@@ -39,4 +42,9 @@ public class SuperBTWItemIronBlade extends SuperBTWItemBlade
 	{
 		return 1; //0 is flint, 1 is iron
 	}
+	
+    public int getDamageVsEntity( Entity entity )
+    {
+        return m_iWeaponDamage;
+    }
 }

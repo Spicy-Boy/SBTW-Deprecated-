@@ -40,7 +40,7 @@ public class SuperBTWItemRibCarving extends SuperBTWItemBladeProgressive
 	        
 	        internalBladeDamage = stack.getTagCompound().getInteger("damage") + 1;
 	        
-	        if (internalBladeDamage >= 21)
+	        if (internalBladeDamage >= 16)
 	        {
 	        	
 	        }
@@ -51,7 +51,7 @@ public class SuperBTWItemRibCarving extends SuperBTWItemBladeProgressive
 	        
 	        
 			
-	        return new ItemStack( FCBetterThanWolves.fcItemLeatherCut, 2);
+	        return new ItemStack( SuperBTWDefinitions.rib, 1);
 	 }
 	 
 	    
