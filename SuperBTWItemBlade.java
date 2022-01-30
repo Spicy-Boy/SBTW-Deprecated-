@@ -1,22 +1,15 @@
 package net.minecraft.src;
 
-public class SuperBTWItemBlade extends FCItemTool
+public class SuperBTWItemBlade extends Item
 {
 	
-	private final int m_iWeaponDamage;
+	private final int m_iWeaponDamage = 0;
 	
-	protected SuperBTWItemBlade( int iItemID, EnumToolMaterial toolMaterial, int iNumUses ) 
+	protected SuperBTWItemBlade( int iItemID) 
 	{
-		super( iItemID, 1, toolMaterial );
-		
-		m_iWeaponDamage = 1;
-	}
-
-	@Override
-	protected boolean IsToolTypeEfficientVsBlockType(Block block) 
-	{
-		// TODO Auto-generated method stub
-		return false;
+		super(iItemID);
+		setFull3D();
+		this.setMaxStackSize(1);
 	}
 
 	public int getMaterial()
@@ -30,7 +23,7 @@ public class SuperBTWItemBlade extends FCItemTool
             
             if ( material == Material.plants || material == Material.vine || material == Material.coral || material != Material.leaves || material != Material.pumpkin )
             {
-            	return 2.5F;
+            	return 2.0F;
             }            
     	
     	return super.getStrVsBlock( stack, world, block, i, j, k );
@@ -39,6 +32,12 @@ public class SuperBTWItemBlade extends FCItemTool
     public int getDamageVsEntity( Entity entity )
     {
         return m_iWeaponDamage;
+    }
+    
+    public boolean onBlockDestroyed( ItemStack stack, World world, int iBlockID, int i, int j, int k, EntityLiving usingEntity )
+    {
+    	stack.damageItem( 1, usingEntity );
+        return true;
     }
     
 //    @Override

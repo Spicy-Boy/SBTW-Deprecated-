@@ -16,15 +16,13 @@ Additions:
 
 -Added new progress crafting recipe: leather cutting (to make cut leather)
 -Added new crafting recipes for leather armor using cut leather (for use in 2x2 grid!)
-    TODO>make craft back into knife
+
 
 -Added new cow drop: Beef rib
-    TODO>Make it take forever to eat
 -Added new food: Seared Beef Rib (by cooking a beef rib)
-    >eaten in stages, can be shared
 -Added new progress crafting recipe: rib cutting
 -Added new item: Rib Bone (made from beef rib)
-    TODO>make craft back into knife
+
 -Added new tool: Bone Pickaxe (made from rib)
     
 
@@ -56,9 +54,7 @@ Changes/Tweaks:
 -Changed (reduced) the HC Respawn timer to 1/4th its original value.
 
 TODO: branches
-    >can be cut from leaves by striking with knife
     >make generate on the ground of forests
-    >make extremely rare drop from leaves???
     
 TODO: Bow Stringing recipe
    (make bow accessible to craft in 2x2 grid by making a bow stringing progress recipe
@@ -69,12 +65,22 @@ TODO: Custom death message for being stabbed to death by a knife. Also, clubs if
 TODO: Grass can grow day or night as long as exposed to sun
 
 TODO: Change saplings to take a really long time to grow... or acorns?
+TODO: Chance to auto-plant in grass like bloodwoods?
+
+TODO: Stone hoe!!!!
 
 Hunger TODO:
 - make starvation health drain take WAAAYYY longer!!! 
-- sprint all the way to hungry (not just peckish)
-- push back the health debuffs to critical levels (look into them, not sure how they work)
 
+TODO: Make mortar cobble bad break into loose cobble rather than drop
+
+TODO: Change powered rail recipe to be cheaper on gold
+
+TODO: Mining charges fix-4x3x3 radius, drop proper materials
+
+TODO: new 2nd campfire stage using torch fire rather than tiny fire block
+
+Mark idea: Twigs snap under foot, making a loud snapping sound that could attract mobs
 
 Base Class Edits:
 FCBlockWeb
@@ -96,11 +102,21 @@ FCBlockLeaves
 FCItemChiselWood
 FCItemChiselStone
 FCUtilsHardcoreSpawn
+FCBlockDeadBush
 
 
 ---
 Long term TODO: Wood widdling/carving recipes
     > bowls, totems, 
+    
+Implement more crops
+    
+Long term TODO: chop logs in half for log slabs and siding
+
+MEGA FEATURES:
+-Chunkloading at new spawns/first campfire (or some nifty way to tell if picked a spot to settle down... maybe wet clay???)
+-Chunkloader "totem" that can change the HC Spawn Chunkloaded spot once
+
 ---
 Really Crazy Ideas:
 -Make animals startle just by getting too close?
@@ -110,4 +126,6 @@ Nah, that's lame.
 Could be fun, maybe hard to implement.
 
 -rib cooking over campfire has custom animation where it is hanging from each stick like smoking a pig
+
+-smokable pipe!!!!
 

@@ -50,7 +50,6 @@ public class SuperBTWRecipes extends FCRecipes
 	{
 		FurnaceRecipes.smelting().addSmelting( SuperBTWDefinitions.cowRib.itemID, new ItemStack( SuperBTWDefinitions.cookedCowRib ), 0 );
 		
-		AddCampfireRecipe( SuperBTWDefinitions.cowRib.itemID, new ItemStack( SuperBTWDefinitions.cookedCowRib ) );
 	}
 	
 	private static void addProgressRecipes() 
@@ -111,6 +110,11 @@ public class SuperBTWRecipes extends FCRecipes
 			new ItemStack[] {
 			new ItemStack( SuperBTWDefinitions.cowRib )
 		} );
+		
+		//debug
+		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.branchBlock, 1), new ItemStack [] {new ItemStack(Item.diamond)} );
+		
+
 	}
 
 

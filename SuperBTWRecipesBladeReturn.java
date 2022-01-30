@@ -81,10 +81,38 @@ public class SuperBTWRecipesBladeReturn implements IRecipe
 		{
 			ItemStack resultStack = null;
 			
+			int internalBladeDamage;
+		        
+			internalBladeDamage = progressiveItemStack.getTagCompound().getInteger("damage");
+			
+			if (!isIron(progressiveItemStack))
+			{
+	        	resultStack = new ItemStack(SuperBTWDefinitions.flintBlade, 1, internalBladeDamage);
+	        	
+			}
+			else
+			{
+				resultStack = new ItemStack(SuperBTWDefinitions.ironBlade, 1, internalBladeDamage);
+			}
+			
+			
+			return resultStack;
 		}
 		
-		return null; //NOT DONE
+		return null; 
 		
+	}
+	
+	private boolean isIron(ItemStack stack)
+	{
+		int iItemID = stack.itemID;
+		
+		if (iItemID == SuperBTWDefinitions.leatherWorkingIron.itemID
+				|| iItemID == SuperBTWDefinitions.ribCarvingIron.itemID)
+		{
+			return true;
+		}
+		return false;
 	}
 	
 	@Override

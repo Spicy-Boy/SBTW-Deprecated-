@@ -9,8 +9,8 @@ public class SuperBTWItemIronBlade extends SuperBTWItemBlade
 	
 	public SuperBTWItemIronBlade(int iItemID) 
 	{
-		//ID, material, number of uses
-		super(iItemID, EnumToolMaterial.IRON, durability);
+		//ID, material, number of uses DEPCATED!!!
+		super(iItemID);
 		// TODO Auto-generated constructor stub
 	    	
 		SetFilterableProperties( Item.m_iFilterable_Narrow );
@@ -22,6 +22,8 @@ public class SuperBTWItemIronBlade extends SuperBTWItemBlade
 	    SetIncineratedInCrucible();
 	    
 	    m_iWeaponDamage = 4; //same as stone axe
+	    
+        this.setMaxDamage(durability);
 
 	}
 	
@@ -34,6 +36,13 @@ public class SuperBTWItemIronBlade extends SuperBTWItemBlade
     	{	
     		fStrength *= 150;
     	}
+    	
+        Material material = block.blockMaterial;
+        
+        if ( material == Material.plants || material == Material.vine || material == Material.coral || material != Material.leaves || material != Material.pumpkin )
+        {
+        	return 4.5F;
+        } 
     	
     	return fStrength;
     }

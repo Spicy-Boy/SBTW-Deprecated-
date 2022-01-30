@@ -8,7 +8,7 @@ public class SuperBTWItemFlintBlade extends SuperBTWItemBlade
 	
 	public SuperBTWItemFlintBlade(int iItemID) 
 	{
-		super(iItemID, EnumToolMaterial.STONE, durability);
+		super(iItemID);
 		// TODO Auto-generated constructor stub
 		
 		SetFilterableProperties( Item.m_iFilterable_Narrow );
@@ -18,6 +18,8 @@ public class SuperBTWItemFlintBlade extends SuperBTWItemBlade
 	    this.setCreativeTab(CreativeTabs.tabTools);
 
 	    m_iWeaponDamage = 3; //slightly weaker than stone axe
+	    
+        this.setMaxDamage(durability);
 	    
 
 	}

@@ -6,7 +6,7 @@ import net.minecraft.server.MinecraftServer;
 
 public class FCUtilsHardcoreSpawn
 {
-	//Aaron changed from 24000 to reduce time between jumps
+	//Aaron changed the variable below from 24000 to reduce time between jumps to 1/4, so half a day?
     public static final int m_iHardcoreSpawnTimeBetweenReassignments = 6000;
     
 	private static final double m_dRadiusBase = 2000D;
