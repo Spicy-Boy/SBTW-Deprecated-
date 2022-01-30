@@ -62,7 +62,7 @@ public class SuperBTWBlockBranch extends Block
     public void registerIcons( IconRegister register )
     {
        // woodIcon = register.registerIcon( "tree_side" );
-        branchIcon = register.registerIcon("SuperBTWItemBranch");
+        branchIcon = register.registerIcon("SuperBTWBlockBranch");
        // branchIcon = register.registerIcon("redstoneDust_cross");
     }
     

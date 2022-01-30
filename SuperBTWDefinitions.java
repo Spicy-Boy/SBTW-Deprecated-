@@ -30,7 +30,8 @@ public class SuperBTWDefinitions {
 		id_cookedCowRibSpent = 20016;
 		
 	private static final int
-		id_branchBlock = 2000;
+		id_branchBlock = 2000,
+		id_sunflower = 2001;
 		
 	
 	public static Item leatherWorking;
@@ -49,6 +50,7 @@ public class SuperBTWDefinitions {
 	public static Item cookedCowRibSpent;
 	
 	public static Block branchBlock;
+	public static Block sunflower;
 	
 	public static void addDefinitions() 
 	{
@@ -70,6 +72,10 @@ public class SuperBTWDefinitions {
 		
 		branchBlock = new SuperBTWBlockBranch(id_branchBlock);
 		Item.itemsList[branchBlock.blockID] = new ItemBlock(branchBlock.blockID - 256); 
+	
+		sunflower = new SuperBTWBlockSunflower(id_sunflower);
+		Item.itemsList[sunflower.blockID] = new ItemBlock(sunflower.blockID - 256); 
+		
 	}
 	
 }
