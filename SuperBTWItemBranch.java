@@ -4,6 +4,7 @@ public class SuperBTWItemBranch extends Item
 {
 	public SuperBTWItemBranch (int iItemID) 
 	{
+		//, SuperBTWDefinitions.branchBlock.blockID
 		super (iItemID);
 		
 		setFull3D();
@@ -12,6 +13,8 @@ public class SuperBTWItemBranch extends Item
     	SetIncineratedInCrucible();
     	SetFilterableProperties( m_iFilterable_Narrow );
     	setUnlocalizedName( "SuperBTWItemBranch" );
+    	
+    	this.setCreativeTab(CreativeTabs.tabMaterials);
 		
 	}
 }

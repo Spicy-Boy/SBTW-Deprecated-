@@ -2,35 +2,37 @@ package net.minecraft.src;
 
 public class SuperBTWDefinitions {
 	
-	private static int
-		//leather stuff
-		id_leatherWorking = 2000,
-		id_flintKnapping = 2001,
+	private static final int
+
+		id_leatherWorking = 20000,
+		id_flintKnapping = 20001,
 		
-		id_flintBlade = 2002,
-		id_ironBlade = 2003,
+		id_flintBlade = 20002,
+		id_ironBlade = 20003,
 		
-		id_cowRib = 2004,
-		id_rib = 2005,
-		id_cookedCowRib = 2006,
-		id_bonePickaxe = 2007,
+		id_cowRib = 20004,
+		id_rib = 20005,
+		id_cookedCowRib = 20006,
+		id_bonePickaxe = 20007,
 		
-		id_leatherWorkingIron = 2008,
+		id_leatherWorkingIron = 20008,
 		
-		id_wetMudBrick = 2009,
-		id_wetAdobe = 2010,
-		id_adobe = 2011,
+		id_wetMudBrick = 20009,
+		id_wetAdobe = 20010,
+		id_adobe = 20011,
 		
-		id_branch = 2012,
+		id_branch = 20012,
 		
-		id_ribCarving = 2013,
-		id_ribCarvingIron = 2014,
+		id_ribCarving = 20013,
+		id_ribCarvingIron = 20014,
 	
-		id_cookedCowRibPartial = 2015,
-		id_cookedCowRibSpent = 2016;
+		id_cookedCowRibPartial = 20015,
+		id_cookedCowRibSpent = 20016;
+		
+	private static final int
+		id_branchBlock = 2000;
 		
 	
-	//leather stuff
 	public static Item leatherWorking;
 	public static Item flintKnapping;
 	public static Item flintBlade;
@@ -45,6 +47,8 @@ public class SuperBTWDefinitions {
 	public static Item ribCarvingIron;
 	public static Item cookedCowRibPartial;
 	public static Item cookedCowRibSpent;
+	
+	public static Block branchBlock;
 	
 	public static void addDefinitions() 
 	{
@@ -63,6 +67,9 @@ public class SuperBTWDefinitions {
 		ribCarvingIron = new SuperBTWItemRibCarvingIron(id_ribCarvingIron - 256);
 		cookedCowRibPartial = new SuperBTWItemCookedCowRibPartial(id_cookedCowRibPartial - 256);
 		cookedCowRibSpent = new SuperBTWItemCookedCowRibSpent(id_cookedCowRibSpent - 256);
+		
+		branchBlock = new SuperBTWBlockBranch(id_branchBlock);
+		Item.itemsList[branchBlock.blockID] = new ItemBlock(branchBlock.blockID - 256); 
 	}
 	
 }

@@ -78,7 +78,7 @@ public class FCBlockLeaves extends BlockLeaves
             {
                 int iIdDropped = idDroppedExceptThisTimeItIsAStick( iMetadata, world.rand, iFortuneModifier );
                 
-                dropBlockAsItem_do( world, i, j, k, new ItemStack( iIdDropped, 1, damageDropped( iMetadata ) ) );
+                dropBlockAsItem_do( world, i, j, k, new ItemStack( iIdDropped, 1, 0) );
             }            
         }
         

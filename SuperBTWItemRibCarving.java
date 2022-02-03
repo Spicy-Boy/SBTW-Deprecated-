@@ -47,6 +47,7 @@ public class SuperBTWItemRibCarving extends SuperBTWItemBladeProgressive
 	        else
 	        {
 	        	FCUtilsItem.GivePlayerStackOrEject( player, new ItemStack(SuperBTWDefinitions.flintBlade, 1, internalBladeDamage));
+	        	FCUtilsItem.GivePlayerStackOrEject( player, new ItemStack(Item.beefRaw, 1));
 	        }
 	        
 	        

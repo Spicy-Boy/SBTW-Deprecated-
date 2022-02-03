@@ -6,6 +6,8 @@ public class SuperBTWItemRib extends Item
 	{
 		super (iItemID);
 		
+		setFull3D();
+		
     	SetIncineratedInCrucible();
     	setUnlocalizedName( "SuperBTWItemRib" );
     	
