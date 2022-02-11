@@ -2377,6 +2377,7 @@ public abstract class FCRecipes
 	{
 		// Alternate recipes for vanilla items
 
+		
 		AddRecipe( new ItemStack( Block.pistonBase, 1 ), new Object[] {
             "#I#", 
             "XYX",
@@ -4185,9 +4186,10 @@ public abstract class FCRecipes
 				new ItemStack( Item.pocketSundial )
 			} );
 		
+		//AARON CHANGED to reflect new recipe for powered rails (you get almost all gold back in nuggets)
 		AddStokedCrucibleRecipe( 
 			//new ItemStack( Item.ingotGold, 1 ), 
-			new ItemStack( Item.goldNugget, 6 ), 
+			new ItemStack( Item.goldNugget, 2 ), 
 			new ItemStack[] {
 				new ItemStack( Block.railPowered )
 		} );

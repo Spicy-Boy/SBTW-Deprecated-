@@ -31,13 +31,16 @@ public class SuperBTWItemFlintBlade extends SuperBTWItemBlade
     	if ( block.blockID == Block.web.blockID 
     			|| block.blockID == FCBetterThanWolves.fcBlockWeb.blockID)
     	{	
-    		fStrength *= 50;
-    	}
-    	else if (block.blockID == Block.vine.blockID)
-    	{
-    		
+    		return fStrength *= 30;
     	}
     	
+        Material material = block.blockMaterial;
+        
+        if ( material == Material.plants || material == Material.vine || material == Material.coral || material != Material.leaves || material != Material.pumpkin )
+        {
+        	return 3.0F;
+        } 
+        
     	return fStrength;
     }
     

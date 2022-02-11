@@ -34,7 +34,7 @@ public class SuperBTWItemIronBlade extends SuperBTWItemBlade
     	
     	if ( block.blockID == Block.web.blockID || block.blockID == FCBetterThanWolves.fcBlockWeb.blockID )
     	{	
-    		fStrength *= 150;
+    		return fStrength *= 150;
     	}
     	
         Material material = block.blockMaterial;

@@ -19,13 +19,6 @@ public class SuperBTWItemBlade extends Item
 	
     public float getStrVsBlock( ItemStack stack, World world, Block block, int i, int j, int k )
     {
-        Material material = block.blockMaterial;
-            
-            if ( material == Material.plants || material == Material.vine || material == Material.coral || material != Material.leaves || material != Material.pumpkin )
-            {
-            	return 2.0F;
-            }            
-    	
     	return super.getStrVsBlock( stack, world, block, i, j, k );
     }
     
@@ -37,6 +30,12 @@ public class SuperBTWItemBlade extends Item
     public boolean onBlockDestroyed( ItemStack stack, World world, int iBlockID, int i, int j, int k, EntityLiving usingEntity )
     {
     	stack.damageItem( 1, usingEntity );
+        return true;
+    }
+    
+    public boolean hitEntity(ItemStack par1ItemStack, EntityLiving par2EntityLiving, EntityLiving par3EntityLiving)
+    {
+        par1ItemStack.damageItem(1, par3EntityLiving);
         return true;
     }
     

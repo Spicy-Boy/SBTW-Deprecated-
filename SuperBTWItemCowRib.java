@@ -12,6 +12,8 @@ public class SuperBTWItemCowRib extends FCItemFood
     	this.setCreativeTab(CreativeTabs.tabFood);
     	
     	SetIncreasedFoodPoisoningEffect();
+    	
+    	maxStackSize = 1;
 		
 	}
 	

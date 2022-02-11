@@ -43,6 +43,47 @@ public class SuperBTWRecipes extends FCRecipes
 		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.bonePickaxe, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.rib), new ItemStack(Item.silk), new ItemStack(Item.stick)} );
 		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.bonePickaxe, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.rib), new ItemStack(FCBetterThanWolves.fcItemHempFibers), new ItemStack(Item.stick)} );
 		
+		//hoes hoes hoes
+		AddRecipe( new ItemStack( SuperBTWDefinitions.hoeStoneNew, 1 ), new Object[] {
+	            "XI", 
+	            "SI",
+	            " I",
+	            Character.valueOf('X'), FCBetterThanWolves.fcItemStone, 
+	            Character.valueOf('I'), Item.stick,
+	            Character.valueOf('S'), Item.silk,
+		} );
+		AddRecipe( new ItemStack( SuperBTWDefinitions.hoeStoneNew, 1 ), new Object[] {
+	            "IX", 
+	            "IS",
+	            "I ",
+	            Character.valueOf('X'), FCBetterThanWolves.fcItemStone, 
+	            Character.valueOf('I'), Item.stick,
+	            Character.valueOf('S'), Item.silk,
+		} );
+		AddRecipe( new ItemStack( SuperBTWDefinitions.hoeStoneNew, 1 ), new Object[] {
+	            "XI ", 
+	            " IS",
+	            " I ",
+	            Character.valueOf('X'), FCBetterThanWolves.fcItemStone, 
+	            Character.valueOf('I'), Item.stick,
+	            Character.valueOf('S'), Item.silk,
+		} );
+		AddRecipe( new ItemStack( SuperBTWDefinitions.hoeStoneNew, 1 ), new Object[] {
+	            " IX", 
+	            "SI ",
+	            " I ",
+	            Character.valueOf('X'), FCBetterThanWolves.fcItemStone, 
+	            Character.valueOf('I'), Item.stick,
+	            Character.valueOf('S'), Item.silk,
+		} );
+		AddRecipe( new ItemStack( SuperBTWDefinitions.hoeStoneNew, 1 ), new Object[] {
+	            "XIS", 
+	            " I ",
+	            " I ",
+	            Character.valueOf('X'), FCBetterThanWolves.fcItemStone, 
+	            Character.valueOf('I'), Item.stick,
+	            Character.valueOf('S'), Item.silk,
+		} );
 	
 	}
 	
@@ -110,9 +151,20 @@ public class SuperBTWRecipes extends FCRecipes
 			new ItemStack[] {
 			new ItemStack( SuperBTWDefinitions.cowRib )
 		} );
+		//this.addRecipe(new ItemStack(Block.railPowered, 6), new Object[] {"X X", "X#X", "XRX", 'X', Item.ingotGold, 'R', Item.redstone, '#', Item.stick});
+        
+		AddRecipe( new ItemStack( Block.railPowered, 8 ), new Object[] {
+	            "IRI", 
+	            "XYX",
+	            "IRI",
+	            Character.valueOf('X'), Item.ingotGold, 
+	            Character.valueOf('I'), Item.ingotIron,
+	            Character.valueOf('R'), Item.redstone,
+	            Character.valueOf('Y'), Item.stick,
+		} );
 		
 		//debug
-		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.branchBlock, 1), new ItemStack [] {new ItemStack(Item.diamond)} );
+		//FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.branchBlock, 1), new ItemStack [] {new ItemStack(Item.diamond)} );
 		
 
 	}

@@ -2034,6 +2034,27 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
                     return Item.bow.getItemIconForUseDuration(0);
                 }
             }
+            //AARON CHANGED this shit.... wow..... I extend the bow 
+            //iconArray to get this to work, because for some reason I cannot call getItemIconForUseDuration in flintKnapping
+            else if (this.itemInUse != null && par1ItemStack.itemID == SuperBTWDefinitions.flintKnapping.itemID)
+            {
+                int var4 = par1ItemStack.getMaxItemUseDuration() - this.itemInUseCount;
+
+                if (var4 >= 13)
+                {
+                	return Item.bow.getItemIconForUseDuration(5);
+                }
+
+                if (var4 > 7)
+                {
+                    return Item.bow.getItemIconForUseDuration(4);
+                }
+
+                if (var4 > 0)
+                {
+                    return Item.bow.getItemIconForUseDuration(3);
+                }
+            }
         }
 
         // FCMOD: Code added (client only)
@@ -2263,6 +2284,7 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
         // END FCMOD
 
         return this.capabilities.allowEdit ? true : (par5ItemStack != null ? par5ItemStack.func_82835_x() : false);
+   
     }
     /**
      * Get the experience points the entity currently has.

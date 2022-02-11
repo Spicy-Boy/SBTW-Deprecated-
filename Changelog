@@ -8,15 +8,15 @@ Additions:
 -Added new tool: Flint knife
 -Added new tool: Iron knife
 -Added new progress crafting recipe: flint knapping (to produce flint knife)
-    TODO>Animated! Too many bad hits and the flint may break..
+-Added recipe for crafting vine traps with two vines
 
 -Added new item: Branch 
     >Harvested from leaves with knife, random chance drop without knife
     >Harvested from dead bushes
+    >generates as a block on the floor of forests (hardcore fuel gathering)
 
 -Added new progress crafting recipe: leather cutting (to make cut leather)
 -Added new crafting recipes for leather armor using cut leather (for use in 2x2 grid!)
-
 
 -Added new cow drop: Beef rib
 -Added new food: Seared Beef Rib (by cooking a beef rib)
@@ -24,19 +24,27 @@ Additions:
 -Added new item: Rib Bone (made from beef rib)
 
 -Added new tool: Bone Pickaxe (made from rib)
-    
 
+-Added tombstone block (currently no way to craft it)
+-Added sunflower block (currently no way to craft it)
+    
 -Added recipe for the original workbench, crafted with 8 planks and an iron ingot
 
+-Added Hiracho's Dynamic Lighting mod, which allows torches to illuminate space even when held in hand!
+
+-Added recipe for stone hoe
+    >can be used to find hemp seeds in grass 
 
 Changes/Tweaks:
 -Changed cows to drop at least 1 leather every time
 -Changed chickens to drop at least 2 feathers every time
 -Changed pigs to always drop 2-3 pork when killed
+-Changed sheep to always drop 2 mutton
+-Changed grass to also grow at night, fixing an issue where feeding animals with grass did not work beyond spawn chunks
 
 -Changed leather to render into 2 glue instead of 1 (and 1 cut leather = 1 glue) 
 -Changed pork to render into 3 tallow (instead of 1 tallow)
--changed a single beef to render into 1 tallow (instead of 4 beef)
+-Changed a single beef to render into 1 tallow (instead of 4 beef)
 
 -Changed steel tools to be enchantable in the standard table ;P
 -Changed steel tools to now accept up to five enchantments in the infernal enchanter (go nuts!)
@@ -53,40 +61,46 @@ Changes/Tweaks:
 
 -Changed (reduced) the HC Respawn timer to 1/4th its original value.
 
-TODO: branches
-    >make generate on the ground of forests
+-Changed mortared cobblestone to break into a loose cobblestone block when broken with improper tool
+
+-Added a new recipe for powered rails that only costs 2 ingots of gold
+
+---
+
+TODO> Permanent death items, they dont respawn on death (maybe a death chest?)
+
+TODO> evergreen trade for knitting and weaving recipes (the villager can do it for you)
+
+TODO>Flint knapping bad hits and good hits
+
+TODO: Mining charges fix-4x3x3 radius, drop proper materials
     
 TODO: Bow Stringing recipe
    (make bow accessible to craft in 2x2 grid by making a bow stringing progress recipe
    like flint knapping, you need to hold enough to string it or it snaps)
-   
+
+TODO> Boost food hunger values for animal feeding
+
+TODO> carving and cutting recipe noises need to be looked at, they suck RN
+
 TODO: Custom death message for being stabbed to death by a knife. Also, clubs if there isn't one already.
 
-TODO: Grass can grow day or night as long as exposed to sun
+TODO: Change saplings to take a really long time to grow.
 
-TODO: Change saplings to take a really long time to grow... or acorns?
-TODO: Chance to auto-plant in grass like bloodwoods?
-
-TODO: Stone hoe!!!!
-
-Hunger TODO:
-- make starvation health drain take WAAAYYY longer!!! 
-
-TODO: Make mortar cobble bad break into loose cobble rather than drop
-
-TODO: Change powered rail recipe to be cheaper on gold
-
-TODO: Mining charges fix-4x3x3 radius, drop proper materials
+TODO: make starvation health drain take WAAAYYY longer!!! 
 
 TODO: new 2nd campfire stage using torch fire rather than tiny fire block
 
-Mark idea: Twigs snap under foot, making a loud snapping sound that could attract mobs
+TODO: branches try to give random rotation
+
+
 
 Base Class Edits:
 FCBlockWeb
 FCEntityChicken
 FCEntityCow
 FCEntityPig
+FCEntitySheep
 FCRecipes
 FCBlockWaterStationary
 EnumToolMaterial
@@ -103,7 +117,18 @@ FCItemChiselWood
 FCItemChiselStone
 FCUtilsHardcoreSpawn
 FCBlockDeadBush
+BiomeDecorator
+ItemBow (for animating flint knapping...)
+FCItemHoe
+FCBlockCobblestone
 
+---
+V2.0 Feature Ideas:
+-Animal hunger and food value tweak, animal taming and behaviors?
+
+-Chunkloaders
+
+-Acorns, with chance to auto-plant in grass like bloodwoods on ash? Burning propogates new growth
 
 ---
 Long term TODO: Wood widdling/carving recipes
@@ -128,4 +153,6 @@ Could be fun, maybe hard to implement.
 -rib cooking over campfire has custom animation where it is hanging from each stick like smoking a pig
 
 -smokable pipe!!!!
+
+Mark idea: Twigs snap under foot, making a loud snapping sound that could attract mobs
 

@@ -17,12 +17,18 @@ public class FCItemChiselWood extends FCItemChisel
         
         setUnlocalizedName( "fcItemChiselWood" );
         
-        m_iWeaponDamage = 2; //slightly weaker than stone axe
+        m_iWeaponDamage = 2;
     }
     
     public int getDamageVsEntity( Entity entity )
     {
         return m_iWeaponDamage;
+    }
+    
+    public boolean hitEntity(ItemStack par1ItemStack, EntityLiving par2EntityLiving, EntityLiving par3EntityLiving)
+    {
+        par1ItemStack.damageItem(1, par3EntityLiving);
+        return true;
     }
     
     //------------- Class Specific Methods ------------//

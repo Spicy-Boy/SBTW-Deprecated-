@@ -12,8 +12,8 @@ public class FCBlockGrass extends BlockGrass
 {
     // global constants
 	
-    public static final int m_iGrassSpreadFromLightLevel = 11;
-    public static final int m_iGrassSpreadToLightLevel = 11; // 7 previously, 4 vanilla
+    public static final int m_iGrassSpreadFromLightLevel = 9; //both values previously 11
+    public static final int m_iGrassSpreadToLightLevel = 9; // 7 previously, 4 vanilla
     public static final int m_iGrassSurviveMinimumLightLevel = 9; // 4 previously
     
     protected FCBlockGrass( int iBlockID )
@@ -35,7 +35,8 @@ public class FCBlockGrass extends BlockGrass
     	int iBlockAboveID = world.getBlockId( i, j + 1, k );
     	Block blockAbove = Block.blocksList[iBlockAboveID];
     	int iBlockAboveMaxNaturalLight = world.GetBlockNaturalLightValueMaximum( i, j + 1, k );
-    	int iBlockAboveCurrentNaturalLight = iBlockAboveMaxNaturalLight - world.skylightSubtracted;
+    	//AARON removed the line down there to allow grass growth even at night...
+    	//int iBlockAboveCurrentNaturalLight = iBlockAboveMaxNaturalLight - world.skylightSubtracted;
     	
         if ( iBlockAboveMaxNaturalLight < m_iGrassSurviveMinimumLightLevel || Block.lightOpacity[iBlockAboveID] > 2 ||
         	( blockAbove != null && !blockAbove.GetCanGrassGrowUnderBlock( world, i, j + 1, k, false ) ) )
@@ -44,7 +45,8 @@ public class FCBlockGrass extends BlockGrass
         	
             world.setBlockWithNotify( i, j, k, Block.dirt.blockID );
         }
-        else if ( iBlockAboveCurrentNaturalLight >= m_iGrassSpreadFromLightLevel )
+        //else if ( iBlockAboveCurrentNaturalLight >= m_iGrassSpreadFromLightLevel )
+        else if ( iBlockAboveMaxNaturalLight >= m_iGrassSpreadFromLightLevel )
         {
         	CheckForGrassSpreadFromLocation( world, i, j, k );
         }

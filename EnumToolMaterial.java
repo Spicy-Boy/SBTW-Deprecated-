@@ -23,9 +23,9 @@ public enum EnumToolMaterial
 	WOOD( 0, 10, 1.01F, 0, 0, 20, 2 ),  // no vanilla enchant of wood
     STONE( 1, 50, 1.01F, 1, 5, 10, 1 ), 
     IRON( 2, 500, 6F, 2, 14, 25, 2 ),
-    EMERALD( 3, 1561, 8F, 3, 20, 30, 3 ),
+    EMERALD( 3, 1561, 8F, 3, 18, 30, 3 ),
     GOLD( 0, 32, 12F, 0, 22, 30, 3 ),
-    SOULFORGED_STEEL( 4, 2250, 12F, 4, 40, 30, 5 ),
+    SOULFORGED_STEEL( 4, 2250, 12F, 4, 30, 30, 5 ),
     BONE(1, 20, 1.01F, 1, 5, 10, 1);
     // END FCMOD
 
