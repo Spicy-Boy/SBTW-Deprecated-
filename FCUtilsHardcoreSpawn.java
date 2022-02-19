@@ -101,6 +101,9 @@ public class FCUtilsHardcoreSpawn
     		return;
     	}
     	
+    	//AARON ADDED to keep track of lives ===== <3 THANKS YANY!!!!!!!!!!!!! <====3
+    	newPlayer.deathCounter = oldPlayer.deathCounter + 1;
+    	
 		long lOverworldTime = FCUtilsWorld.GetOverworldTimeServerOnly();
 		long lTimeOfLastPlayerSpawnAssignment = oldPlayer.m_lTimeOfLastSpawnAssignment;
 		long lDeltaTimeSinceLastRespawnAssignment = lOverworldTime - lTimeOfLastPlayerSpawnAssignment; 

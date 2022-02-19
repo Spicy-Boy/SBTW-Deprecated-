@@ -322,7 +322,7 @@ public class BlockLeaves extends BlockLeavesBase
      * Called when the player destroys a block with an item that can harvest it. (i, j, k) are the coordinates of the
      * block and l is the block's subtype/damage.
      */
-    //Aaron changed to include blades for branch harvesting
+    //AARON changed to include blades for branch harvesting
     public void harvestBlock(World par1World, EntityPlayer par2EntityPlayer, int par3, int par4, int par5, int par6)
     {
         if (!par1World.isRemote && par2EntityPlayer.getCurrentEquippedItem() != null )

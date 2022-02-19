@@ -18,6 +18,9 @@ import net.minecraft.src.EntityPlayer.BeaconRespawnValidationResult.BeaconStatus
 
 public abstract class EntityPlayer extends EntityLiving implements ICommandSender
 {
+	//AARON ADDED
+	public int deathCounter = 0;
+	
     /** Inventory of the player */
     public InventoryPlayer inventory = new InventoryPlayer(this);
     private InventoryEnderChest theInventoryEnderChest = new InventoryEnderChest();
@@ -684,6 +687,7 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
     /**
      * Called when the mob's health reaches 0.
      */
+    //AARON CHANGED to keep track of deaths! Thanks Yany!!!!
     public void onDeath(DamageSource par1DamageSource)
     {
         super.onDeath(par1DamageSource);
@@ -713,6 +717,7 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
 
         this.yOffset = 0.1F;
         this.addStat(StatList.deathsStat, 1);
+        
     }
 
     /**
@@ -2040,12 +2045,12 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
             {
                 int var4 = par1ItemStack.getMaxItemUseDuration() - this.itemInUseCount;
 
-                if (var4 >= 13)
+                if (var4 >= 20)
                 {
                 	return Item.bow.getItemIconForUseDuration(5);
                 }
 
-                if (var4 > 7)
+                if (var4 > 13)
                 {
                     return Item.bow.getItemIconForUseDuration(4);
                 }
@@ -2556,6 +2561,11 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
 	    {
 	    	m_iInGloomCounter = tag.getInteger( "fcGloomCounter" );
 	    }
+	    //AARON ADDED to keep track of deaths
+	    if(tag.hasKey("yyNumberOfDeaths"))
+	    	{
+	    		deathCounter = tag.getInteger("yyNumberOfDeaths");
+	    	}
     }
     
     protected void WriteModDataToNBT( NBTTagCompound tag )
@@ -2575,6 +2585,9 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
 	 	
 	 	tag.setInteger( "fcGloomLevel", GetGloomLevel() );
 	 	tag.setInteger( "fcGloomCounter", m_iInGloomCounter );
+	 	
+	 	//AARON ADDED to keep track of deaths->thanks YanY!
+	 	tag.setInteger("yyNumberOfDeaths", deathCounter);
     }
     
     @Override

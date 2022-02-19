@@ -36,7 +36,7 @@ public class SuperBTWItemFlintBlade extends SuperBTWItemBlade
     	
         Material material = block.blockMaterial;
         
-        if ( material == Material.plants || material == Material.vine || material == Material.coral || material != Material.leaves || material != Material.pumpkin )
+        if ( material == Material.plants || material == Material.vine || material == Material.coral || material == Material.leaves || material == Material.pumpkin )
         {
         	return 3.0F;
         } 

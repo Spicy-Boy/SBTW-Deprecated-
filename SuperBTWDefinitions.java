@@ -29,7 +29,9 @@ public class SuperBTWDefinitions {
 		id_cookedCowRibPartial = 20015,
 		id_cookedCowRibSpent = 20016,
 	
-		id_hoeStoneNew = 20017;
+		id_hoeStoneNew = 20017,
+		
+		id_bowStringing = 20018;
 		
 	private static final int
 		id_branchBlock = 2000,
@@ -52,6 +54,7 @@ public class SuperBTWDefinitions {
 	public static Item cookedCowRibPartial;
 	public static Item cookedCowRibSpent;
 	public static Item hoeStoneNew;
+	public static Item bowStringing;
 	
 	public static Block branchBlock;
 	public static Block sunflower;
@@ -75,6 +78,7 @@ public class SuperBTWDefinitions {
 		cookedCowRibPartial = new SuperBTWItemCookedCowRibPartial(id_cookedCowRibPartial - 256);
 		cookedCowRibSpent = new SuperBTWItemCookedCowRibSpent(id_cookedCowRibSpent - 256);
 		hoeStoneNew = ( new FCItemHoe( id_hoeStoneNew, EnumToolMaterial.BONE ) ).setUnlocalizedName( "hoeStone" );;
+		bowStringing = new SuperBTWItemBowStringing(id_bowStringing - 256);
 		
 		branchBlock = new SuperBTWBlockBranch(id_branchBlock);
 		Item.itemsList[branchBlock.blockID] = new ItemBlock(branchBlock.blockID - 256); 

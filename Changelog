@@ -8,6 +8,7 @@ Additions:
 -Added new tool: Flint knife
 -Added new tool: Iron knife
 -Added new progress crafting recipe: flint knapping (to produce flint knife)
+    >animated, must land hit at right moment or flint can break
 -Added recipe for crafting vine traps with two vines
 
 -Added new item: Branch 
@@ -65,15 +66,13 @@ Changes/Tweaks:
 
 -Added a new recipe for powered rails that only costs 2 ingots of gold
 
+-Changed items dropped on death to no longer despawn after 20 minutes
+    >instead, items dropped on death will disappear after 5 deaths 
+    
+-Changed mining charges to drop the proper chunks (and diamonds) when blasting ore
+-Changed mining charges to blast stone blocks into cobblestone
+
 ---
-
-TODO> Permanent death items, they dont respawn on death (maybe a death chest?)
-
-TODO> evergreen trade for knitting and weaving recipes (the villager can do it for you)
-
-TODO>Flint knapping bad hits and good hits
-
-TODO: Mining charges fix-4x3x3 radius, drop proper materials
     
 TODO: Bow Stringing recipe
    (make bow accessible to craft in 2x2 grid by making a bow stringing progress recipe
@@ -121,6 +120,8 @@ BiomeDecorator
 ItemBow (for animating flint knapping...)
 FCItemHoe
 FCBlockCobblestone
+EntityItem
+FCExplosionMining
 
 ---
 V2.0 Feature Ideas:
@@ -130,7 +131,12 @@ V2.0 Feature Ideas:
 
 -Acorns, with chance to auto-plant in grass like bloodwoods on ash? Burning propogates new growth
 
+-evergreen trade for knitting and weaving recipes (the villager can do it for you)
+
+-Mining charges fix-4x3x3 radius, drop proper materials
 ---
+
+
 Long term TODO: Wood widdling/carving recipes
     > bowls, totems, 
     

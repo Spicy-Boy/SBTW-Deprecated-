@@ -132,6 +132,10 @@ public class SuperBTWRecipes extends FCRecipes
 		FCRecipes.AddShapelessRecipe(new ItemStack(Item.bootsLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut), new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
 		FCRecipes.AddShapelessRecipe(new ItemStack(Item.helmetLeather, 1), new ItemStack [] {new ItemStack(FCBetterThanWolves.fcItemLeatherCut)} );
 		
+		//branch recipes!
+		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcBlockTorchFiniteUnlit, 1), new ItemStack [] {new ItemStack(Item.coal), new ItemStack(SuperBTWDefinitions.branch)} );
+		
+		
 		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcItemFireStarterSticks, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch), new ItemStack(SuperBTWDefinitions.branch)} );
 		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcItemFireStarterSticks, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch), new ItemStack(Item.stick)} );
 		FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcItemChiselWood, 1), new ItemStack [] {new ItemStack(SuperBTWDefinitions.branch)} );

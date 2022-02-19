@@ -5216,6 +5216,16 @@ public abstract class FCRecipes
 		FCEntityVillager.addTradeToBuyMultipleItems(farmer, FCBetterThanWolves.fcItemWool.itemID, 3, 16, 24, 1F, 1);
 		FCEntityVillager.addTradeToBuyMultipleItems(farmer, Item.dyePowder.itemID, 15, 32, 48, 1F, 1);
 		
+//		FCEntityVillager.addComplexTrade(
+//				farmer,
+//				Item.reed.itemID, 0, 4, 4,
+//				Item.emerald.itemID, 0, 1, 1,
+//				FCBetterThanWolves.fcItemWickerPiece.itemID, 0, 1, 1,
+//				0.5F, 1
+//			)
+//			.setMandatory();
+
+		
 		FCEntityVillager.addLevelUpTradeToBuySingleItem(farmer, Item.hoeIron.itemID, 1, 1, 1);
 		
 		//Level 2

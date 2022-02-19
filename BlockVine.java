@@ -430,14 +430,29 @@ public class BlockVine extends Block
      */
     public void harvestBlock(World par1World, EntityPlayer par2EntityPlayer, int par3, int par4, int par5, int par6)
     {
-        if (!par1World.isRemote && par2EntityPlayer.getCurrentEquippedItem() != null && 
-        		par2EntityPlayer.getCurrentEquippedItem().itemID == Item.shears.itemID ||
-        		par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.ironBlade.itemID ||
-        		par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.flintBlade.itemID)
+        par2EntityPlayer.addStat(StatList.mineBlockStatArray[this.blockID], 1);
+        if (!par1World.isRemote && par2EntityPlayer.getCurrentEquippedItem() != null)
         {
-            par2EntityPlayer.addStat(StatList.mineBlockStatArray[this.blockID], 1);
-            this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(Block.vine, 1, 0));
+	        if (par2EntityPlayer.getCurrentEquippedItem().itemID == Item.shears.itemID)
+	        {
+	        	this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(Block.vine, 1));
+	    
+	        }
+	        else if (par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.ironBlade.itemID
+	    		|| par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.flintBlade.itemID)
+	        {
+	        	this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(Block.vine, 1));
+	        }
         }
+    	//AARON CHANGED
+//        if (!par1World.isRemote && par2EntityPlayer.getCurrentEquippedItem() != null && 
+//        		par2EntityPlayer.getCurrentEquippedItem().itemID == Item.shears.itemID ||
+//        		par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.ironBlade.itemID ||
+//        		par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.flintBlade.itemID)
+//        {
+//            par2EntityPlayer.addStat(StatList.mineBlockStatArray[this.blockID], 1);
+//            this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(Block.vine, 1, 0));
+//        }
         else
         {
             super.harvestBlock(par1World, par2EntityPlayer, par3, par4, par5, par6);
