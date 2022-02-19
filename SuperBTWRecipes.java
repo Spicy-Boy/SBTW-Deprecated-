@@ -4,6 +4,7 @@ public class SuperBTWRecipes extends FCRecipes
 {
 	public static final SuperBTWRecipes instance = new SuperBTWRecipes();
 	private SuperBTWRecipes() {}
+	private static final int m_iIgnoreMetadata = FCUtilsInventory.m_iIgnoreMetadata;
 	
 	public static void addRecipes()
 	{
@@ -95,9 +96,15 @@ public class SuperBTWRecipes extends FCRecipes
 	
 	private static void addProgressRecipes() 
 	{
-
-		//OLD VVV
-		//FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.leatherWorking, 1, 20), new ItemStack[] {new ItemStack(SuperBTWDefinitions.flintBlade), new ItemStack(Item.leather)} );
+		
+//		AddShapelessRecipe( new ItemStack( Item.silk, 3 ), new Object[] {
+//				new ItemStack( SuperBTWDefinitions.bowStringing, 1, m_iIgnoreMetadata ) 
+//			} );
+		AddShapelessRecipeWithSecondaryOutputIndicator( new ItemStack( Item.silk, 3 ), new Object[] {	    		
+	    		new ItemStack(SuperBTWDefinitions.bowStringing, 1, m_iIgnoreMetadata)
+			} );
+		
+		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.bowStringing, 1, 0), new ItemStack [] {new ItemStack(Item.stick), new ItemStack(Item.silk), new ItemStack(Item.silk), new ItemStack(Item.silk)} );
 		
 		
 		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.flintKnapping, 1, /*this number must match the value within GetProgressiveCraftingMaxDamage*/10), new ItemStack [] {new ItemStack(Item.flint), new ItemStack(FCBetterThanWolves.fcItemStone)} );
@@ -169,6 +176,8 @@ public class SuperBTWRecipes extends FCRecipes
 		
 		//debug
 		//FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.branchBlock, 1), new ItemStack [] {new ItemStack(Item.diamond)} );
+		
+		//FCRecipes.AddShapelessRecipe(new ItemStack(FCBetterThanWolves.fcItemArmorWoolBoots, 1), new ItemStack [] {new ItemStack(Item.diamond)} );
 		
 
 	}

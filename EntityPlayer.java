@@ -694,11 +694,39 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
         this.setSize(0.2F, 0.2F);
         this.setPosition(this.posX, this.posY, this.posZ);
         this.motionY = 0.10000000149011612D;
-
+        
+        //AARON CHANGED for unique drops per player
         if (this.username.equals("Notch"))
         {
             this.dropPlayerItemWithRandomChoice(new ItemStack(Item.appleRed, 1), true);
         }
+        
+        if (this.username.equals("TheLadyDawn"))
+        {
+            this.dropPlayerItemWithRandomChoice(new ItemStack(FCBetterThanWolves.fcItemNuggetSteel, 1), true);
+        }
+        	
+        if (this.username.equals("Sockthing"))
+        {
+            this.dropPlayerItemWithRandomChoice(new ItemStack(FCBetterThanWolves.fcItemArmorWoolBoots, 1, 0), true);
+        }
+        
+        if (this.username.equals("EpicAaron29"))
+        {
+            this.dropPlayerItemWithRandomChoice(new ItemStack(FCBetterThanWolves.fcItemDung, 1), true);
+        }
+        
+//        if (this.username.equals("EpicAaron29"))
+//        {
+//        	this.dropPlayerItemWithRandomChoice(new ItemStack(Item.cookie, 1), true);
+//        }
+        
+        if (this.username.equals("Gilberreke"))
+        {
+        	this.dropPlayerItemWithRandomChoice(new ItemStack(Item.book, 1), true);
+        }
+        
+
 
         if (!this.worldObj.getGameRules().getGameRuleBooleanValue("keepInventory"))
         {
@@ -1321,6 +1349,7 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
                 }
 
                 // FCMOD: Code added to modify player attack damage by health and exhaustion
+                //AARON NOTE!!! Look into this to change damage modifiers...
                 float fModifier = GetMeleeDamageModifier();
                 
                 if ( fModifier < 0.99F )
@@ -2055,9 +2084,34 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
                     return Item.bow.getItemIconForUseDuration(4);
                 }
 
-                if (var4 > 0)
+                if (var4 > 2)
                 {
                     return Item.bow.getItemIconForUseDuration(3);
+                }
+                
+                if (var4 > 0)
+                {
+                    return Item.bow.getItemIconForUseDuration(6);
+                }
+            }
+            //AARON CHANGED: The bow stringing animations are below!
+            else if (this.itemInUse != null && par1ItemStack.itemID == SuperBTWDefinitions.bowStringing.itemID)
+            {
+                int var4 = par1ItemStack.getMaxItemUseDuration() - this.itemInUseCount;
+
+                if (var4 >= 26)
+                {
+                	return Item.bow.getItemIconForUseDuration(9);
+                }
+
+                if (var4 > 15)
+                {
+                    return Item.bow.getItemIconForUseDuration(8);
+                }
+
+                if (var4 > 0)
+                {
+                    return Item.bow.getItemIconForUseDuration(7);
                 }
             }
         }

@@ -1,16 +1,19 @@
 package net.minecraft.src;
-
+//NOTE!
+/* Define the images for the animation in itemBow.java
+ * Define the animation times in entityPlayer
+ */
 public class SuperBTWItemBowStringing extends Item {
 
 	public SuperBTWItemBowStringing(int iItemID) {
 		super(iItemID);
 		// TODO Auto-generated constructor stub
 	    	
-	    setUnlocalizedName( "SuperBTWItemFlintKnapping" );  
+	    setUnlocalizedName( "SuperBTWItemBowStringing" );  
 
 	    maxStackSize = 1;
         
-	    this.setMaxDamage(1);
+	    this.setMaxDamage(10);
 	}
 
     public int getMaxItemUseDuration(ItemStack par1ItemStack)
@@ -40,39 +43,43 @@ public class SuperBTWItemBowStringing extends Item {
     	int var6 = this.getMaxItemUseDuration(itemStack) - iTicksInUseRemaining;
     	System.out.println("Var 6 = " + var6);
         
-    	if (var6 < 7)
+    	if (var6 < 15) //nothing happens
     	{
     		return;
     	}
     	
-        if (var6 < 20 || var6 > 35)
+        if (var6 > 23 && var6 < 35) //success!
         {
-
-        	itemStack.damageItem( 11, player );
-        	FCUtilsItem.GivePlayerStackOrEject( player, new ItemStack(FCBetterThanWolves.fcItemStone, 1));
         	//player.inventory.mainInventory[player.inventory.currentItem] = null;
-        	player.inventory.mainInventory[player.inventory.currentItem] = new ItemStack( FCBetterThanWolves.fcItemStone, 1);
+        	player.playSound( "random.bow", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F );
+        	player.inventory.mainInventory[player.inventory.currentItem] = new ItemStack( Item.bow, 1, 0);
 
         }
-        else if (var6 > 20)
+        else if (var6 > 29) //bow breaks!!!
         {
-        	itemStack.damageItem( -1, player);
-        	System.out.println("Item damage = " + itemStack.getItemDamage());
-        	player.playSound( "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F );
+        	itemStack.damageItem( 11, player );
+        	player.playSound( "mob.zombie.woodbreak", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F );
+        	player.inventory.mainInventory[player.inventory.currentItem] = new ItemStack( Item.silk, 2);
             //var7 = 1.0F;
-        	
-        	if (itemStack.getItemDamage() <= 0)
-        	{
-        		
-        		FCUtilsItem.GivePlayerStackOrEject( player, new ItemStack(FCBetterThanWolves.fcItemStone, 1));
-        		itemStack.damageItem( 11, player );
-        		//to remove item from inv VVV
-        		//player.inventory.mainInventory[player.inventory.currentItem] = null;
-        		player.inventory.mainInventory[player.inventory.currentItem] = new ItemStack( SuperBTWDefinitions.flintBlade, 1);
-        	}
         }
     	
     	
+    }
+    
+    public void OnUsedInCrafting( EntityPlayer player, ItemStack outputStack )
+    {
+		if ( outputStack.itemID == Item.silk.itemID )
+		{
+	    	if ( !player.worldObj.isRemote )
+	    	{
+    			FCUtilsItem.EjectStackWithRandomVelocity( player.worldObj, player.posX, player.posY, player.posZ, new ItemStack( Item.stick ) ); 
+	    	}
+	    	
+	    	if ( player.m_iTimesCraftedThisTick == 0 )
+			{
+				player.playSound( "random.bow", 0.25F, player.worldObj.rand.nextFloat() * 0.25F + 1.5F );
+			}
+		}
     }
 	
 }

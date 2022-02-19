@@ -63,7 +63,7 @@ public class SuperBTWItemFlintKnapping extends Item
 //        float var7 = (float)var6 / 20.0F;
 //        var7 = (var7 * var7 + var7 * 2.0F) / 3.0F;
         
-    	if (var6 < 7)
+    	if (var6 < 4)
     	{
     		return;
     	}
@@ -88,7 +88,7 @@ public class SuperBTWItemFlintKnapping extends Item
         else if (var6 > 20)
         {
         	itemStack.damageItem( -1, player);
-        	System.out.println("Item damage = " + itemStack.getItemDamage());
+        	//System.out.println("Item damage = " + itemStack.getItemDamage());
         	player.playSound( "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F );
             //var7 = 1.0F;
         	

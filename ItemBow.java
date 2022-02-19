@@ -4,7 +4,12 @@ public class ItemBow extends Item
 {
 	//AARON CHANGED this horror.... oh god I have mutilated the bow class for my own ends. This class controls all other animations...
     public static final String[] bowPullIconNameArray = new String[] {"bow_pull_0", "bow_pull_1", "bow_pull_2", 
-    		"flint_pull_0", "flint_pull_1", "flint_pull_2"};
+    		//The flint knapping animation files VVV
+    		"flint_pull_0", "flint_pull_1", "flint_pull_2", "flint_pull_transition",
+    		//The bow stringing animation files VVV
+    		"stringing_pull_0", "stringing_pull_1", "stringing_pull_2"
+    		//"apple", "cake", "flint"
+    		};
     private Icon[] iconArray;
 
     public ItemBow(int par1)

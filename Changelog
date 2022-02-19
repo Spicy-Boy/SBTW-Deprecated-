@@ -35,6 +35,8 @@ Additions:
 
 -Added recipe for stone hoe
     >can be used to find hemp seeds in grass 
+    
+-Added new progress crafting recipe: bow stringing (to produce a bow without crafting table)
 
 Changes/Tweaks:
 -Changed cows to drop at least 1 leather every time
@@ -42,6 +44,9 @@ Changes/Tweaks:
 -Changed pigs to always drop 2-3 pork when killed
 -Changed sheep to always drop 2 mutton
 -Changed grass to also grow at night, fixing an issue where feeding animals with grass did not work beyond spawn chunks
+
+-Changed animal feed values to make it easier to keep animals fed
+    >Testing required!
 
 -Changed leather to render into 2 glue instead of 1 (and 1 cut leather = 1 glue) 
 -Changed pork to render into 3 tallow (instead of 1 tallow)
@@ -72,27 +77,12 @@ Changes/Tweaks:
 -Changed mining charges to drop the proper chunks (and diamonds) when blasting ore
 -Changed mining charges to blast stone blocks into cobblestone
 
+-Changed starvation to take a little longer
+-Removed immediate nausea effect on starvation
+
 ---
-    
-TODO: Bow Stringing recipe
-   (make bow accessible to craft in 2x2 grid by making a bow stringing progress recipe
-   like flint knapping, you need to hold enough to string it or it snaps)
 
-TODO> Boost food hunger values for animal feeding
-
-TODO> carving and cutting recipe noises need to be looked at, they suck RN
-
-TODO: Custom death message for being stabbed to death by a knife. Also, clubs if there isn't one already.
-
-TODO: Change saplings to take a really long time to grow.
-
-TODO: make starvation health drain take WAAAYYY longer!!! 
-
-TODO: new 2nd campfire stage using torch fire rather than tiny fire block
-
-TODO: branches try to give random rotation
-
-
+TODO: ADD GOURDS!!!!!
 
 Base Class Edits:
 FCBlockWeb
@@ -122,6 +112,11 @@ FCItemHoe
 FCBlockCobblestone
 EntityItem
 FCExplosionMining
+FoodStats 
+EntityPlayerMP (change hunger confusion effect)
+Item (change animal food values)
+FCItemStraw
+FCItemRottenFlesh
 
 ---
 V2.0 Feature Ideas:
@@ -130,10 +125,17 @@ V2.0 Feature Ideas:
 -Chunkloaders
 
 -Acorns, with chance to auto-plant in grass like bloodwoods on ash? Burning propogates new growth
+>Change saplings to take a really long time to grow in general, more stages
 
 -evergreen trade for knitting and weaving recipes (the villager can do it for you)
 
 -Mining charges fix-4x3x3 radius, drop proper materials
+
+-Branches try to give random rotation
+
+-New 2nd campfire stage using torch fire particles rather than tiny fire block
+
+-Custom death message for being stabbed to death by a knife. Also, clubs if there isn't one already.
 ---
 
 

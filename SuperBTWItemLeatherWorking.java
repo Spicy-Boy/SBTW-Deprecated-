@@ -23,7 +23,7 @@ public class SuperBTWItemLeatherWorking extends SuperBTWItemBladeProgressive
 	 protected void PlayCraftingFX( ItemStack stack, World world, EntityPlayer player )
 	 {
 	    	//worldObj.playAuxSFX( FCBetterThanWolves.m_iCreeperNeuteredAuxFXID, i, j, k, 0 );
-	        player.playSound( "mob.sheep.shear", 
+	        player.playSound( "step.cloth", 
 	        	0.25F + 0.25F * (float)world.rand.nextInt( 2 ), 
 	        	( world.rand.nextFloat() - world.rand.nextFloat() ) * 0.25F + 1.75F );
 	 }
