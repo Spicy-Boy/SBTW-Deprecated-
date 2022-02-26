@@ -24,6 +24,8 @@ public class SuperBTWRecipes extends FCRecipes
 		CraftingManager.getInstance().getRecipeList().add( new SuperBTWRecipesRibCarving() );
 		
 		CraftingManager.getInstance().getRecipeList().add( new SuperBTWRecipesBladeReturn() );
+		
+		CraftingManager.getInstance().getRecipeList().add( new SuperBTWRecipesPumpkinCutting() );
 	}
 	
 	public static void addBlockRecipes()
@@ -91,7 +93,19 @@ public class SuperBTWRecipes extends FCRecipes
 	public static void addFoodRecipes()
 	{
 		FurnaceRecipes.smelting().addSmelting( SuperBTWDefinitions.cowRib.itemID, new ItemStack( SuperBTWDefinitions.cookedCowRib ), 0 );
+		FurnaceRecipes.smelting().addSmelting( SCDefs.pumpkinSlice.itemID, new ItemStack( SCDefs.pumpkinSliceRoasted ), 0 );
+    	
+		AddCauldronRecipe( 
+			new ItemStack( SCDefs.pumpkinSliceBoiled, 1 ), 
+			new ItemStack[] {
+				new ItemStack( SCDefs.pumpkinSlice, 1 ),
+		} );
 		
+		AddCauldronRecipe( 
+				new ItemStack( Item.beefCooked, 1 ), 
+				new ItemStack[] {
+					new ItemStack(SuperBTWDefinitions.cowRib, 1 ),
+		} );
 	}
 	
 	private static void addProgressRecipes() 

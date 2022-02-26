@@ -26,7 +26,7 @@ Additions:
 
 -Added new tool: Bone Pickaxe (made from rib)
 
--Added tombstone block (currently no way to craft it)
+-Added tombstone block (currently no way to craft/find it)
 -Added sunflower block (currently no way to craft it)
     
 -Added recipe for the original workbench, crafted with 8 planks and an iron ingot
@@ -37,6 +37,15 @@ Additions:
     >can be used to find hemp seeds in grass 
     
 -Added new progress crafting recipe: bow stringing (to produce a bow without crafting table)
+
+-Added Sockthings's Sock's Crops mod (specifically, his gourds), which changes pumpkin and melon farming
+    >gourds now grow on large vines, like those in a pumpkin patch
+    >added four new pumpkin types and four new melon types
+-Added new item: pumpkin slices
+    >by using a knife on a pumpkin in the crafting grid, the player can get pumpkin slices
+    >this recipe also gives the player 4 pumpkin seeds
+    >not edible
+-Added new items: roasted and boiled pumpkin slices
 
 Changes/Tweaks:
 -Changed cows to drop at least 1 leather every time
@@ -117,6 +126,15 @@ EntityPlayerMP (change hunger confusion effect)
 Item (change animal food values)
 FCItemStraw
 FCItemRottenFlesh
+SlotArmor (pumpkin hats fix)
+GuiIngame (NOTE: MUST BE ADDED TO SRC AFTER!!!)
+FCEntityUrn
+
+
+TEXTURES TODO:
+
+change pumpkin and goggles overlay to be less shitty
+
 
 ---
 V2.0 Feature Ideas:
@@ -136,6 +154,8 @@ V2.0 Feature Ideas:
 -New 2nd campfire stage using torch fire particles rather than tiny fire block
 
 -Custom death message for being stabbed to death by a knife. Also, clubs if there isn't one already.
+
+-Endermen can pick up SCpumpkins and other cool blocks
 ---
 
 
