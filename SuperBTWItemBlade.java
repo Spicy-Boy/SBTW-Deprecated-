@@ -39,6 +39,13 @@ public class SuperBTWItemBlade extends Item
         return true;
     }
     
+    @Override
+    //for pumpkin cutting!
+    public boolean IsDamagedInCrafting() {
+    	// TODO Auto-generated method stub
+    	return true;
+    }
+    
 //    @Override
 //    public boolean onBlockDestroyed( ItemStack stack, World world, int iBlockID, int i, int j, int k, EntityLiving usingEntity )
 //    {

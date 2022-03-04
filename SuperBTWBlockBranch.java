@@ -22,13 +22,19 @@ public class SuperBTWBlockBranch extends Block
 	public boolean canBlockStay(World par1World, int par2, int par3, int par4) {
 		// TODO Auto-generated method stub
 		
-		if (par1World.getBlockId(par2, par3 - 1, par4) == Block.grass.blockID)
+		if (par1World.getBlockId(par2, par3 - 1, par4) == Block.grass.blockID || par1World.getBlockId(par2, par3 - 1, par4) == Block.dirt.blockID)
 		{
 			return true;
 		}
 		else return false;
 		
 		//return super.canBlockStay(par1World, par2, par3, par4);
+	}
+	
+	@Override
+	public boolean CanBeCrushedByFallingEntity(World world, int i, int j, int k, EntityFallingSand entity) {
+		// TODO Auto-generated method stub
+		return true;
 	}
 	
 

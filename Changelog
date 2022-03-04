@@ -91,8 +91,6 @@ Changes/Tweaks:
 
 ---
 
-TODO: ADD GOURDS!!!!!
-
 Base Class Edits:
 FCBlockWeb
 FCEntityChicken
@@ -131,9 +129,15 @@ GuiIngame (NOTE: MUST BE ADDED TO SRC AFTER!!!)
 FCEntityUrn
 
 
-TEXTURES TODO:
+TRUE FINAL TODO:
 
-change pumpkin and goggles overlay to be less shitty
+-Add Death Club (rib + wood)
+
+-LANG FILE!!!!! 
+
+-Remove Time Cube
+
+-change pumpkin and goggles overlay to be less shitty
 
 
 ---
@@ -156,6 +160,8 @@ V2.0 Feature Ideas:
 -Custom death message for being stabbed to death by a knife. Also, clubs if there isn't one already.
 
 -Endermen can pick up SCpumpkins and other cool blocks
+
+-Gourd types have own seeds and spawn in different places
 ---
 
 

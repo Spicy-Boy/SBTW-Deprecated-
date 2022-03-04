@@ -31,12 +31,12 @@ public class SCBlockGourdStem extends FCBlockCrops {
 	
 	@Override
 	public float GetBaseGrowthChance(World world, int i, int j, int k) {
-		return 0.2F;
+		return 0.1F;
 	}
 
 	public float GetVineGrowthChance( )
     {
-    	return 0.5F;
+    	return 0.25F;
     }
 	
 	public int GetLightLevelForGrowth()

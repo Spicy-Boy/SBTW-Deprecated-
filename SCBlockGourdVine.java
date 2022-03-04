@@ -33,12 +33,12 @@ public class SCBlockGourdVine extends BlockDirectional {
     }
 	
 	protected float GetFlowerChance() {
-		return 0.5F;
+		return 0.30F;
 	}
 	
 	protected float GetVineGrowthChance()
     {
-    	return 0.25F;
+    	return 0.1F;
     }
 	
 	@Override

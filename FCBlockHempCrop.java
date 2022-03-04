@@ -164,10 +164,10 @@ public class FCBlockHempCrop extends BlockCrops
         {
         	// kill the plant below if not harvested by shears
         	//Aaron added blades
-        	if ( player.getCurrentEquippedItem() == null ||
-        		player.getCurrentEquippedItem().itemID != Item.shears.itemID ||
-        		player.getCurrentEquippedItem().itemID != SuperBTWDefinitions.ironBlade.itemID ||
-        		player.getCurrentEquippedItem().itemID != SuperBTWDefinitions.flintBlade.itemID )
+        	if ( player.getCurrentEquippedItem() == null || !getValidTool(player.getCurrentEquippedItem().itemID))
+        		//(player.getCurrentEquippedItem().itemID != Item.shears.itemID))
+//        		player.getCurrentEquippedItem().itemID != SuperBTWDefinitions.ironBlade.itemID ||
+//        		player.getCurrentEquippedItem().itemID != SuperBTWDefinitions.flintBlade.itemID ))
         	{
         		if ( world.getBlockId( i, j - 1, k ) == blockID )
         		{
@@ -182,7 +182,16 @@ public class FCBlockHempCrop extends BlockCrops
 	
     //------------- Class Specific Methods ------------//
 
-    protected boolean GetIsTopBlock( IBlockAccess blockAccess, int i, int j, int k )
+    private boolean getValidTool(int itemID) {
+		// TODO Auto-generated method stub
+    	
+    	if (itemID == Item.shears.itemID) return true;
+    	if (itemID == SuperBTWDefinitions.flintBlade.itemID) return true;
+    	if (itemID == SuperBTWDefinitions.ironBlade.itemID) return true;
+		return false;
+	}
+
+	protected boolean GetIsTopBlock( IBlockAccess blockAccess, int i, int j, int k )
     {
     	return GetIsTopBlock( blockAccess.getBlockMetadata( i, j, k ) );
     }
